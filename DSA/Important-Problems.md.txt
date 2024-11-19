@@ -1,0 +1,4 @@
+```cpp
++∞ = INT_MAX
+-∞ = INT_MIN
+```

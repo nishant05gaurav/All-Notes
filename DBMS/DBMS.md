@@ -1,11 +1,9 @@
-### `Data`:
-
+## Data
 - Collection of raw, unorganized facts and details like observations, figures, symbols, facts, etc
 - Stored in the form of bits and bytes
 - It has no significance by itself
 
-### `Information`:
-
+## Information
 - It is processed, interrupted, organized, and structured data
 - Extracted from the data by analyzing and interpreting pieces of data
 
