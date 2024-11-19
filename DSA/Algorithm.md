@@ -1,31 +1,21 @@
-## Algorithm
-#### `Algorithm v/s Program`
+# Algorithm
 
-| Algorithm | Program  |
-| ---| --- |
-| Step-by-step procedure or set of rules designed to solve a specific problem or perform a particular task | It is a specific implementation of an algorithm using a programming language |
-| Design            | Implementation        |
-| Domain Knowledge  | Programmer            |
-| Any Language      | Programming Lnaguage  |
-| Don't depends on Hardware and OS      | Depends on Haedware and OS  |
-| Analyze           | Testing               |
-
-#### `Characteristics of Algorithm`:
+## Characteristics of Algorithm
 1. **Input**:
-   - Data or information provided to the algorithm that it operates on to produce the desired output
-   - Take various forms depending on the nature of the problem being solved.
+- Data or information provided to the algorithm that it operates on to produce the desired output
+- Take various forms depending on the nature of the problem being solved.
 2. **Output**:
-   - Represents the desired outcome or solution to a problem.
-   - Without output, an algorithm would lack purpose and utility in problem-solving tasks.
+- Represents the desired outcome or solution to a problem.
+- Without output, an algorithm would lack purpose and utility in problem-solving tasks.
 3. **Definiteness**:
-   - Requirement of each step of the algorithm must be precisely and unambiguously defined
-   - It is a crucial characteristic of algorithms because it ensures clarity, consistency, correctness, interoperability (exchange information seamlessly) , and ease of debugging and maintenance
+- Requirement of each step of the algorithm must be precisely and unambiguously defined
+- It is a crucial characteristic of algorithms because it ensures clarity, consistency, correctness, interoperability (exchange information seamlessly) , and ease of debugging and maintenance
 4. **Finiteness**:
-   - Refers to the property that an algorithm must terminate after a finite number of steps (OR) there should be a clear endpoint to the execution of the algorithm, and it should not run indefinitely.
-   - It is a critical property of algorithms because it ensures efficient resource utilization, predictable behavior, a positive user experience, real-world applicability, and ease of debugging.
+- Refers to the property that an algorithm must terminate after a finite number of steps (OR) there should be a clear endpoint to the execution of the algorithm, and it should not run indefinitely.
+- It is a critical property of algorithms because it ensures efficient resource utilization, predictable behavior, a positive user experience, real-world applicability, and ease of debugging.
 5. **Effectiveness**:
-   - Refers to the ability of an algorithm to achieve its intended purpose efficiently and accurately.
-   - It in algorithms encompasses correctness, efficiency, scalability, robustness, simplicity, and adaptability.
+- Refers to the ability of an algorithm to achieve its intended purpose efficiently and accurately.
+- It in algorithms encompasses correctness, efficiency, scalability, robustness, simplicity, and adaptability.
 
 `With the help of an example`: An algorithm, like a recipe, needs clear instructions (**definiteness**) to process information (**input**) and achieve a specific goal (**output**). Just like a recipe shouldn't take forever to bake (**finiteness**), an algorithm should run in a reasonable amount of time. The best recipes, like the best algorithms, are also efficient (**effectiveness**), using the least amount of ingredients and steps to get the job done.
 
