@@ -104,7 +104,7 @@
 - If `f(n)` is `O(g(n))` then that of `a*f(n)` is same
 - A function is itself `O(f(n))`
   - Same function is the upper as well as the lower bound of the function
-- If `f(n)` is `O(g(n))` and `g(n)` is `O(h(n))`
+- If `f(n)` is `O(g(n))` then `g(n)` is `O(h(n))`
 - If `f(n)` is `θ(g(n))` then `g(n)` is `θ(f(n))`
 - If `f(n)` is `O(g(n))` then `g(n)` is `Ω(f(n))`
 - If `f(n) = O(g(n))`  and `f(n) = Ω(g(n))`. Therefore, `f(n) = θ(g(n))`
