@@ -1,5 +1,6 @@
 # Algorithm
 
+- Algrithm: A set of finite rules or instructions to be followed in calculations or other problem-solving operations
 ## Characteristics of Algorithm
 1. **Input**:
 - Data or information provided to the algorithm that it operates on to produce the desired output
@@ -50,18 +51,18 @@
 
 ![Graphs of time function](https://imgur.com/fwoCqDg.png)
 
-#### `Time Complexity and Big-O Notation`:
+## Time Complexity and Big-O Notation
 ![Time & Space Complexity](https://imgur.com/L2JUO1G.png)
 ![Time & Space Complexity](https://imgur.com/W6FXMs8.png)
 
-#### *`Asymptotic Notations`*
+## Asymptotic Notations
 - Asymptotic notation gives us an idea about how good a given algorithm is compared to some other algorithm.
 - There are three types of asymptotic notstions:
   1. Big-O notation (`O`)
   2. Big omega notation (`Ω`)
   3. Big theta notation (`θ`) --> "Widely Used"
 
-#### **`Big-O Notation (O)`**:
+## Big-O Notation (O)
 - Describe an asymptotic upper bond.
 - Mathematically, if `f(n)` describes the running time of an algorithm; `f(n)` is `O(g(n))` if and only if there exist positive constants c and n° such that:
 ```htXMLml
@@ -72,7 +73,7 @@
 
 ![Big-O Graph](https://imgur.com/hUAVM0t.png)
 
-#### **`Big Omega Notation (Ω)`**:
+## Big Omega Notation (Ω)
 - Describe an asymptotic lower bond.
 - Let `f(n)` describes the running time of an algorithm; `f(n)` is `Ω(g(n))` if and only if there exist positive constants `c` and `n°` such that:
 ```html
@@ -82,7 +83,7 @@
 
 ![Big Omega Graph](https://imgur.com/KeGxTlU.png)
 
-#### **`Big theta notation (θ)`**:
+## Big theta notation (θ)
 - Let `f(n)` define the running time of an algorithm.
 - `f(n)` is said to be **θ (g(n))** if `f(n)` is `O(g(n))` and `f(n)` is `Ω(g(n))` both. 
 ```html
@@ -99,7 +100,7 @@
 
 ![Order of Runntime Algorithm](https://imgur.com/J8WmSYn.png)
 
-#### Properties of Asymptotic Notations:
+## Properties of Asymptotic Notations
 - If `f(n)` is `O(g(n))` then that of `a*f(n)` is same
 - A function is itself `O(f(n))`
   - Same function is the upper as well as the lower bound of the function
@@ -115,7 +116,7 @@ f(n) * d(n) = O (g(n)*e(n))
 
 - For the comparision of two functions we use the mathematical concept `log`: Apply log on both the functions.
 
-#### Best Case, Worst Case and Average Case Analysis of an Algorithm:
+### Best Case, Worst Case and Average Case Analysis of an Algorithm
 
 1. **Best Case**: The scenario in which the algorithm performs optimally, achieving the lowest possible time    complexity or space complexity for a given input size
 2. **Worst Case**: The scenario of an algorithm in which the algorithm exhibits the highest time complexity or resource usage
@@ -123,7 +124,7 @@ f(n) * d(n) = O (g(n)*e(n))
       - So, the worst case flactuates from: `O(log n)` to `O(n)`
 3. **Average Case**: Represents its expected performance when given random inputs from the problem domain. It involves analyzing the algorithm's behavior over a range of possible inputs, considering their probability distribution, and calculating the average performance based on this distribution. This analysis helps in understanding how the algorithm typically behaves in real-world scenarios and guides decision-making in algorithm selection and design.
 
-#### Analysis of an Algorithm:
+### Analysis of an Algorithm
 - We are given a sorted array `arr[]={1, 7, 18, 28, 50, 180}`. Here, we have to search a given number and report whether it’s present in the array or not. So, we got two situations here: 
   - **Algorithm 1**: Start from the first element until an element greater than or equal to the number to be searched is found.
   - **Algorithm 2**: Check whether the first or last element is equal to the number. If not, find the number between these two elements (center of the array); if the center element is greater than the number to be searched, repeat the process for the first half else, repeat for the second half until the number is found. And this way, keep dividing your search space, making it faster to search.

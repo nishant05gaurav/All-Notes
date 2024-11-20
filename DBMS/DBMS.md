@@ -62,38 +62,35 @@ DBMS follows ***ACID*** rule during transaction and these are as follows:
 6. **Concurrent Access Anomalies**: Simultaneous access or modifications by multiple users can result in conflicts and data corruption.
 7. **Security Problem**: File systems lack advanced security measures, making it harder to control access and protect sensitive information.
 
-### `OLAP`:
-
+## OLAP
 - OLAP (Online Analytical Processing) is type of data processing system that is designed for complex queries and analysis of data
 - It is used for data mining, business intelligence, and decision support systems
 - It is optimized for reading data, enabling users the analysis of data onto different prespective and extract meaningful insights
-- `Characteristics`:
-  - **Data Structure**: Organized in a multi-dimensional model (star schema, snowflake schema) that allows easy slicing and dicing of data
-  - **Data Volume**: Handles large volume of historical data
-  - **Speed**: Optimized for fast query performance, especially for complex queries
-  - **Use Cases**: Reporting, forecasting, trend analysis, budgeting, and data mining
+- **Characteristics**:
+  - *Data Structure*: Organized in a multi-dimensional model (star schema, snowflake schema) that allows easy slicing and dicing of data
+  - *Data Volume*: Handles large volume of historical data
+  - *Speed*: Optimized for fast query performance, especially for complex queries
+  - *Use Cases*: Reporting, forecasting, trend analysis, budgeting, and data mining
 
-### `OLTP`:
-
+## OLTP
 - OLTP (Online Transaction Processing) is a type of data processing system that is designed for the managment of transactional data
 - It supports day-to-day operations by handling a large number of short, atomic transactions
 - These are optimized with writnig data, ensuring data integrity and consistency
-- `Characteristics`:
-  - **Data Structure**: These are often normalized to reduce data redundancy and ensure data integrity
-  - **Data Volume**: Handles current real-time data and often has a large number of short transactions
-  - **Speed**: Optimized for quick processing of individual transactions, ensuring immediate updates to the database
-  - **Use Cases**: Customer relationship management (CRM), e-commerce systems, online banking, and point-of-sale (POS) system
+- **Characteristics**:
+  - *Data Structure*: These are often normalized to reduce data redundancy and ensure data integrity
+  - *Data Volume*: Handles current real-time data and often has a large number of short transactions
+  - *Speed*: Optimized for quick processing of individual transactions, ensuring immediate updates to the database
+  - *Use Cases*: Customer relationship management (CRM), e-commerce systems, online banking, and point-of-sale (POS) system
 
-| `Key Diff`           | `OLAP`                                           | `OLTP`                                             |
-| -------------------- | ------------------------------------------------ | -------------------------------------------------- |
-| **Functionality**    | Data analysis and reporting                      | Data entry and retrieval for day-to-day operations |
-| **Data Structure**   | Allows slicing and dicing of data                | Relational and higly normalized                    |
-| **Query Complexity** | Complex (joins, aggregations, and data analysis) | Simple (insertions, updates, and deletions)         |
-| **Data Volume**      | Large volumes of historical data                 | Current, real-time data                            |
-| **Performance**      | Optimized for query performance                  | Optimized for transaction performances             |
+| Key Diff | OLAP | OLTP | 
+| ------- | ------- | -------- |
+| *Functionality*   | Data analysis and reporting | Data entry and retrieval for day-to-day operations |
+| *Data Structure*  | Allows slicing and dicing of data  | Relational and higly normalized |
+| *Query Complexity* | Complex (joins, aggregations, and data analysis) | Simple (insertions, updates, and deletions) |
+| *Data Volume* | Large volumes of historical data  | Current, real-time data  |
+| *Performance* | Optimized for query performance | Optimized for transaction performances |
 
-### `ER Diagram`:
-
+## ER Diagram
 - Introduced by `Dr. Peter Chan` in 1976
 - It is a high-level data model, used to define data elements and their relationship
 - A non-technical design method works on conceptual level based on the perception of real world
@@ -102,13 +99,12 @@ DBMS follows ***ACID*** rule during transaction and these are as follows:
 - Basically, it is a diagramatical represenataion that are easy to understand even by non-technical users
 ![alt text](https://imgur.com/jIA80Ns.png)
 
-### `Entity`:
-
+## Entity
 - An entity is a thing or an object in the real world that is distingaishable from other objects based on the values of the attributes it posseses
 - class is same as object and entity as ID (HTML/CSS)
-- `Types`:
-  - **Tangible**: Entities which physically exist in real world. eg: Car, Pen, Banklocker
-  - **Intangible**: Entities which exists logically. eg: Account
+- **Types**:
+  - *Tangible*: Entities which physically exist in real world. eg: Car, Pen, Banklocker
+  - *Intangible*: Entities which exists logically. eg: Account
 - `Weak Entity`: An entity that depends on another entity is called a weak entity. It does not contain any key attribute of its own
   - It avoids data duplication caused by duplicating these of a strong entity
 - `Strong Entity`: An entity set that contains sufficient attributes to uniquely identify all its entities
@@ -166,7 +162,7 @@ DBMS follows ***ACID*** rule during transaction and these are as follows:
 
 ### `Cardinalities / Cardinality Ratio`: (`MAPPING`)
 
-- Expresses the number of entities to which other entity can be related (via relationnshiplates)
+- Expresses the number of entities to which other entity can be related (via a relationship)
 - NOTE:
   - In case of one-to-one. One entity relates to at most one entitty of other set. So, it may be possible that some entity do not relate to any one
 - `Cardinality Constraint`: Maximum number of relationship instances in which an entity can participate
