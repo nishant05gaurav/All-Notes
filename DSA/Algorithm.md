@@ -108,11 +108,12 @@
 - If `f(n)` is `θ(g(n))` then `g(n)` is `θ(f(n))`
 - If `f(n)` is `O(g(n))` then `g(n)` is `Ω(f(n))`
 - If `f(n) = O(g(n))`  and `f(n) = Ω(g(n))`. Therefore, `f(n) = θ(g(n))`
-- If `f(n) = O (g(n))` & `d(n) = O (e(n))`. Then:
-```xml
-f(n) + d(n) = O (max(g(n),e(n)))
-f(n) * d(n) = O (g(n)*e(n))
-```
+- If `f(n) = O (g(n))` & `d(n) = O (e(n))`
+  ```xml
+  Then:
+    f(n) + d(n) = O (max(g(n),e(n)))
+    f(n) * d(n) = O (g(n)*e(n))
+  ```
 
 - For the comparision of two functions we use the mathematical concept `log`: Apply log on both the functions.
 
@@ -124,37 +125,37 @@ f(n) * d(n) = O (g(n)*e(n))
       - So, the worst case flactuates from: `O(log n)` to `O(n)`
 3. **Average Case**: Represents its expected performance when given random inputs from the problem domain. It involves analyzing the algorithm's behavior over a range of possible inputs, considering their probability distribution, and calculating the average performance based on this distribution. This analysis helps in understanding how the algorithm typically behaves in real-world scenarios and guides decision-making in algorithm selection and design.
 
-### Analysis of an Algorithm
+## Analysis of an Algorithm
 - We are given a sorted array `arr[]={1, 7, 18, 28, 50, 180}`. Here, we have to search a given number and report whether it’s present in the array or not. So, we got two situations here: 
   - **Algorithm 1**: Start from the first element until an element greater than or equal to the number to be searched is found.
   - **Algorithm 2**: Check whether the first or last element is equal to the number. If not, find the number between these two elements (center of the array); if the center element is greater than the number to be searched, repeat the process for the first half else, repeat for the second half until the number is found. And this way, keep dividing your search space, making it faster to search.
 
-`Analyzing Algorithm 1`: (**Linear Search**)
+### Analyzing Algorithm 1: (**Linear Search**)
 - Suppose we find out the element at the first element of the array. Therefore, we only made one comparison which is obviously constant for any size of the array.
   - *Best case complexity* = `O(1)`
 - Suppose, the element will be at the last position. Therefore, our program made **`n`** comparision.
   - *Worst case complexity* = `0(n)`
 - *Average case complexity* = `Σ(list of all possible cases)/(total no. of cases)`
 
-`Analyzing Algorithm 2`: (**Binary Search**)
+### Analyzing Algorithm 2: (**Binary Search**)
 - Suppose, the first element will be the only element that gets compared. Hence, a constant time.
   - *Best case complexity* = `O(1)`
 - If not, then we will have to keep dividing the array into halves until we get a single  element.
   -  Therefore, time taken = `n + n/2 +n/4 + ....... + 1` = `logn` with base `2`
   - *Worst case complexity* = `O(log n)`
 
-#### `Space Complexity`:
+### Space Complexity
 - Time is not the only thing we worry about while analyzing algorithms. Space is equally important.
 - Creating an array of size n (size of the input) → `O(n)` Space  
 - If a function calls itself recursively n times, its space complexity is `O(n)`.
 
-####  Why we can't calculate complexity in seconds when dealing with time complexities ?
+###  Why we can't calculate complexity in seconds when dealing with time complexities ?
 - Not everyone’s computer is equally powerful. So, We just measure the growth of time with an increase in the input size.
 - Asymptotic analysis is the measure of how time (runtime) grows with input.
 
 ![Time Complexity Tricks](https://imgur.com/jcvH6cV.png)
 
-### Dis-Joint Sets:
+## Dis-Joint Sets
 - A set to be an equivalence:
   - `Reflexive`: For every elemet [a ⊆ S]
   - `Symmetric`: a R b; b R a [a ⊆ S]
@@ -164,27 +165,27 @@ f(n) * d(n) = O (g(n)*e(n))
 - We perform two operations here:
   - `FIND`: for finding a given element in a set
   - `UNION`:  For finding the union operations. Perform only when two elements are in two different sets, after performing the union we need to simplify the set by combining the two sets. See, below examples for more clarity:
-- `Applications`: 
+- **Applications**: 
   - To represent network connectivity
   - To find least common ancestor
   - Kruskal's minimum spanning tree algorithm(graph theory)
 - Used where there is a need to partition a set of elements into disjoint subsets and perform operations like merging two sets or finding which set an element belongs to.
 
-#### Operations on Disjoint Sets:
+### Operations on Disjoint Sets
 - `MakeSet(x)`: Creates a new set containing element x.
 - `Union(x, y)`: Merges the sets containing elements x and y into a single set.
 - `Find(x)`: Returns the representative (also known as the "root" or "leader") of the set containing element x
   ![Dis-joint Sets](https://imgur.com/Sr40Mdr.png)
 
-### `Recurrence Relation`:
-- **A recurrence relation is an equation or inequality that describes a function in terms of its value on smaller inputs**
+## Recurrence Relation
+- *A recurrence relation is an equation or inequality that describes a function in terms of its value on smaller inputs*
 - A recurrence relation in algorithms is a mathematical expression that defines the running time or resource usage of an algorithm in terms of smaller subproblems of the same nature.
 - Recurrence relations are commonly used to analyze the time complexity of algorithms, particularly in divide-and-conquer algorithms, dynamic programming, and recursive algorithms.
 
-- `Implementation & Solving Techniques of Recurrence Relation`:
-  - **Substitution Method**: In this approach, we make an educated guess about the form of the solution and then prove its correctness by induction or other means.
-  - **Recursion Tree Method**: This method involves drawing a tree to represent the recursive calls made by the algorithm and then analyzing the total work done at each level of the tree.
-  - **Master Theorem**: The Master Theorem provides a concise way to solve recurrence relations of a specific form, particularly those that arise in divide-and-conquer algorithms. It gives solutions in terms of asymptotic bounds.
+- Implementation & Solving Techniques of Recurrence Relation:
+  - *Substitution Method*: In this approach, we make an educated guess about the form of the solution and then prove its correctness by induction or other means.
+  - *Recursion Tree Method*: This method involves drawing a tree to represent the recursive calls made by the algorithm and then analyzing the total work done at each level of the tree.
+  - *Master Theorem*: The Master Theorem provides a concise way to solve recurrence relations of a specific form, particularly those that arise in divide-and-conquer algorithms. It gives solutions in terms of asymptotic bounds.
 
 ![Recurrence Relation-1](https://imgur.com/JYj1M4k.png)
 
@@ -195,15 +196,13 @@ f(n) * d(n) = O (g(n)*e(n))
 
 ![Questions on Recurrence Relation-II](https://imgur.com/PfhaLY4.png)
 
-### `Masters Theorem`:
-
+## Masters Theorem
 - The Master Theorem is a tool used in the analysis of algorithms, particularly in the context of recursive algorithms.
 - Determine the time complexity of divide-and-conquer algorithms by providing a simple formula to calculate their time complexity.
 
 ![Masters Theorem](https://imgur.com/UXE72fV.png)
 
-### `Binary Search`:
-
+## Binary Search
 - Algorithm used for finding a target value within a sorted array or list
 - Repeatedly divide the search interval in half until the target value is found or determined to be not present in the array.
 - Here we need two index pointers: **low** and **high** and if the  low croses the high then index is not found.
@@ -211,10 +210,10 @@ f(n) * d(n) = O (g(n)*e(n))
 - Time Complexity:
   - Minimum = O(1)
   - Maximum = O(log n)
-- `Need for Binary Search` because the inefficiency of linear search when dealing with large datasets.
-- We `Use Binary Search` because of its speed and efficiency, It drastically reduces the number of comparisons required to find a target value compared to linear search. Hence, ideal choice where quick search operations are necessary, such as searching in databases, sorting algorithms like quicksort and mergesort, and more.
+- **Need for Binary Search** because the inefficiency of linear search when dealing with large datasets.
+- We **Use Binary Search** because of its speed and efficiency, It drastically reduces the number of comparisons required to find a target value compared to linear search. Hence, ideal choice where quick search operations are necessary, such as searching in databases, sorting algorithms like quicksort and mergesort, and more.
 
-`Binary Search Iterative Method`
+### Binary Search Iterative Method
 
 ```c
 int Bin search(A, n, key)
@@ -242,7 +241,7 @@ int Bin search(A, n, key)
 
 ![Binary Search](https://imgur.com/TPbUq8L.png)
 
-`Binary Search Recursive Method`
+### Binary Search Recursive Method
 
 ```c
 Algorithm RBinSearch (l, h, key)
@@ -268,36 +267,32 @@ Algorithm RBinSearch (l, h, key)
 }
 ```
 
-### `Binary Tree`:
-
+## Binary Tree
 - It is a fundamental hierarchical data structure where each node can have at most two children: a **left child** and a **right child**.
 - The topmost node in the tree is called the `root`.
 - We should a have nodes from left-right
-
-```md
-         1 ---> Root (2 & 3--> its children)
-       /   \
-      2     3
-     / \   / \
-    4  5   6  7
-```
-
-![Binary Tree](https://imgur.com/fLHtGGi.png)
+  ```md
+           1 ---> Root (2 & 3--> its children)
+         /   \
+        2     3
+       / \   / \
+      4  5   6  7
+  ```
+  ![Binary Tree](https://imgur.com/fLHtGGi.png)
 
 - **Need and Usage of Binary Trees**:
-
   - _Efficient Searching and Sorting_: Enables efficient searching (lookup in a dictionary) and sorting due to their inherent ordering.
   - _Dynamic Data Management_: They can grow or shrink as needed, making them suitable for datasets that change over time.
   - _Fast Access_: By following branches based on comparisons, you can quickly locate or insert data.
 
-- **Types**:
-  1. `Full Binary Tree`:
+- *Types*:
+  1. **Full Binary Tree**:
     - Every node (except possibly leaf nodes) has two children.
     - All leaf nodes are at the same level.
     - Useful for theoretical considerations or when compactness is a priority
     - Every full binary tree is a complete binary tree
     - ![Full Binary Tree](https://imgur.com/eqFelkz.png)
-  2. `Complete Binary Tree`:
+  2. **Complete Binary Tree**:
     - A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
     - If we construct a complete binary tree from an array without any gaps or missing elements, it's still called a complete binary tree.
     - A complete binary tree is a full binary tree upto a height `h-1`
@@ -305,20 +300,15 @@ Algorithm RBinSearch (l, h, key)
     - Height of the complete binary tree is minimum only i.e. `log n`
     - ![Complete Binary Tree](https://imgur.com/3cYlwSK.png)
 
-### `Heap`
-
+## Heap
 - A heap is a specialized tree-based data structure designed for efficient retrieval of the minimum or maximum element.
 - Retrieving the minimum or maximum element takes constant time `O(1)`
-- `Maximum Heap`:
-
+- **Maximum Heap**:
   - Every node has a value greater than or equal to the values of its children.
   - Maximum value is always at the root of the tree.
-
-    - `When to Use`
-
+    - *When to Use*
       1. Scheduling high-priority jobs in a system.
       2. Implementing the Huffman coding algorithm for data compression.
-
       ```md
              50
             /  \
@@ -330,15 +320,11 @@ Algorithm RBinSearch (l, h, key)
       Array: [50, 30, 20, 15, 10, 8, 16]
       ```
 
-- `Minimum Heap`:
-
+- **Minimum Heap**:
   - Every node is having value smaller/equal to all its descend nodes
-
-    - `When to Use`
-
+    - *When to Use*
     1. Finding the shortest path in Dijkstra's algorithm for graph traversal.
     2. Implementing the Prim's algorithm for finding the minimum spanning tree.
-
     ```md
            8
           /  \
@@ -350,15 +336,13 @@ Algorithm RBinSearch (l, h, key)
     Array: [8, 10, 16, 15, 30, 20, 50]
     ```
 
-#### `Insertion Element in Heap`:
-
+### Insertion Element in Heap
 - Add new element as a leaf at the below most position
 - Then adjust its position while comparing with the ancestors
 - Always the direction of adjustment is upward
 - _Time Complexity_: **O(1) to O(log n)**
 
-#### `Deletion element from Heap`:
-
+### Deletion element from Heap
 - **Time Complexity**: log n
 - **Delete Root**: The element at the root (the maximum in a max-heap, minimum in a min-heap) is removed
 - **Move Last Element to Root**: The last element in the heap (which might not be the largest or smallest) is placed in the root position.
@@ -370,12 +354,11 @@ Algorithm RBinSearch (l, h, key)
   - Min-Heap: After deletion and heapify down, the new root element will be the next smallest element in the heap
 - **Idea**: Delete the element & fill it on an empty array-sorted array
 
-![Insertion & Deletion fromm Heap](https://imgur.com/orucdLq.png)
+  ![Insertion & Deletion fromm Heap](https://imgur.com/orucdLq.png)
 
-#### `Heap Sort`:
-
+## Heap Sort
 - Heap-sort is an efficient sorting algorithm that utilizes the properties of a heap data structure to sort an array in `O(n log n)` time complexity
-- `Process`
+- *Process*
   1. **Create a Maximum Heap**: Convert given array to maximum heap
   2. **Extract Maximum**:
      - Remove the element at the root (the largest in a max-heap).
@@ -388,38 +371,33 @@ Algorithm RBinSearch (l, h, key)
      - Continue extracting the maximum element & place it at the end of the sorted portion & size reduced by 1
   5. **Get Sorted Array**: The entire array becomes sorted. The largest element is at the end, the second largest is second to last, and so on.
 
-#### `Heapify`:
-
+### Heapify:
 - Process of creating heap from an array
 - **Main idea** is to start from the last non-leaf node (i.e., the parent of the last element) and repeatedly heapify each subtree to build the heap from the bottom up.
 - Time Complexity: `O(log n)`
 
-#### `Priority Queue`:
-
+## Priority Queue:
 - A priority queue (**Prioritizing Elements for Efficient Processing**) is a data structure where elements have priorities and they can be inserted or deleted accordingly
 - Smaller the number higher the priority [MIN HEAP]/ Larger the number higher the priority [MAX HEAP]
 - Heap is the best DS for implementing priority queue
 - The time complexity of insertion and deletion in a heap is `O(log n)`
-- `Need`:
+- *Need*:
   - **Efficient Handling of Urgent Tasks**: Allows you to focus on the most critical items first
   - **Optimization Algorithms**: Various optimization algorithms (Dijkstra's algorithm)
 - _Standard queues_ adhere to FIFO, while _Priority queues_ prioritize based on assigned values.
 
-![Merge Sort](https://imgur.com/vzZBXDw.png)
+## ![Merge Sort](https://imgur.com/vzZBXDw.png)
 
-![aMerging](https://imgur.com/b5e7X1y.png)
+## ![aMerging](https://imgur.com/b5e7X1y.png)
 
-#### `Pros & Cons of Merge Sort`:
-
+### Pros & Cons of Merge Sort
 - Large size list
 - Linked List
   - We can merge two linked list without creating 3rd linked list
 - External Sorting:
   - We can bring pieces or chunck of files from harddisk & merge them
 - Stable:
-
   - If there is a duplicate element in the array/ then the merge will preserve the order
-
   ```md
   Element of Array: 8, 6, 4, 3, 8, 5, 9 [8 --> (for R); 8 --> (for A)]
 
@@ -428,10 +406,9 @@ Algorithm RBinSearch (l, h, key)
   Element of Array: 3, 4, 5, 6, 8(R), 8(A), 9
   ```
 
-![Quick Sort](https://imgur.com/JonbbLM.png)
+## ![Quick Sort](https://imgur.com/JonbbLM.png)
 
-### `Greedy Method`:
-
+## Greedy Method
 - A greedy method is a particular approach for solving optimization problems (problems which require either minimum/ maximum result) by making a series of choices that appear best at each stage.
 - Makes a series of seemingly best choices at each step to solve optimization problems
 - May not find the absolute best solution but offers a fast and efficient approach
@@ -450,14 +427,14 @@ Algorithm RBinSearch (l, h, key)
    }
   ```
 
-#### `Knapsack Problem`(Greedy-Method):
-
+## Knapsack Problem-(Greedy-Method):
 - It is an optimization problem, we try to pick objects from a list to maximize the total profit while keeping the weight under a certain limit
 - It is a container loading problem
 - There are two types of Knapsack Problem:
   - Knapsack and 0-1 Knapsack
   - In **Knapsack**, we can take fraction of an object, but in **0-1 Knapsack** Problem, we can only take the whole object or none of it.
-- ![Knapsack Problem](https://imgur.com/RPlIkxk.png)
+
+![Knapsack Problem](https://imgur.com/RPlIkxk.png)
   - Way to solve it:
     1. Calculate the profit per weight ratio for each object
     2. Sort the objects by their profit per weight ratio in descending order
@@ -465,13 +442,11 @@ Algorithm RBinSearch (l, h, key)
     4. If adding an object exceed the weight capacity, skip the object
     5. Continue, till the bag is full or there are no more objects to add
 
-#### `Job Sequencing with Deadlines`(Greedy-Method):
-
+## Job Sequencing with Deadlines-(Greedy-Method)
 - The goal is to sequence the jobs in a way that maximizes the total profit while meeting all the deadlines
   ![Job Sequencing](https://imgur.com/qYczosp.png)
 
-#### `Optimal Merge Sort`(Greedy-Method):
-
+## Optimal Merge Sort(Greedy-Method)
 - Here, in these kind of problems we use the concept of merging sorted list and combining them into one sorted list
 - Always we should merge a pair of short sized list to get the best result
 - Time Complexity is O(m+n)
@@ -481,14 +456,13 @@ Algorithm RBinSearch (l, h, key)
 - Result = 15+35+95+60 = 205
 - Result = 3(5)+3(10)+2(20)+2(30)+2(30) = 205
   - We can calculate this as `n*(size)` --> n = number of link to reach till root node 
-#### `Huffman Coding`(Greedy-Method):
 
+## Huffman Coding-(Greedy-Method)
 - Huffman coding is a compression tecnique that is used to reduce the size of a file or data before transmission over a network
 - Here, the frequently used alphabets are assigned shorter codes and less frequent alphabets are assigned longer codes. This way, the overall size of the encoded message is reduced
   ![Huffman Coding](https://imgur.com/tjDSSAL.png)
 
-#### `Minimum-Cost Spanning Tree`:
-
+## Minimum-Cost Spanning Tree
 - **Spanning tree** is a sub-graph of a graph having all vertices but only (n-1) edges
 - They do not have cycles
   ![Spanning Tree](https://imgur.com/Kkz7yPN.png)
@@ -497,41 +471,34 @@ Algorithm RBinSearch (l, h, key)
   - Prim's Algorithm
   - Krushkal's Algorithm
 
-#### `Prim's Algorithm`:
-
+## Prim's Algorithm:
 ![Prims Algorithm](https://imgur.com/SW6uQnY.png)
-
 - Time Complexity = **O(V^2)**
 
-#### `Krushkal's Algorithm`:
-
+## Krushkal's Algorithm
 ![Krushkal's Algorithm](https://imgur.com/dDztIni.png)
-
 - Time Complexity can be improved to **O(E log V)** using a min-heap data structure.
 
-#### `Dijkstra Algorithm`:
-
+## Dijkstra Algorithm
 - Dijkstra's algorithm, a powerful tool for finding the shortest paths between a starting point and all other reachable nodes in a weighted graph.
 - For single source path problem / minimization problem / optimization problem(Greedy Method).
 - Works for non-negative edge weights (travel times cannot be negative).
 - It guarantees finding the shortest path for all reachable nodes in the graph.
   ![Dijkstra Algorithm](https://imgur.com/VIwft1W.png)
 
-### `Dyanmic Programming`:
-
+## Dyanmic Programming
 - **Dynamic programming** is a powerful technique that efficiently solves complex problems by breaking them into overlapping subproblems, storing solutions for reuse to avoid redundant computations.
 - It is tecnique where you find all the solution and then pick up the best solution, the optimal solution
-- Follows the `principle of optimality` (Problems must be solved in sequence of decisions)
+- Follows the *principle of optimality* (Problems must be solved in sequence of decisions)
 - Time consuming process
-- We use **iterative** instead recursion to save time
-- `Cons`:
-  - **Memory usage**: Uses tables or caches to store subproblem solutions and lead to high memory usage, especially for problems with large input sizes
-  - **Limited applicability**: All problems cann't be solved and works best for problems with optimal substructure and overlapping subproblems
+- We use *iterative* instead recursion to save time
+- **Cons**:
+  - *Memory usage*: Uses tables or caches to store subproblem solutions and lead to high memory usage, especially for problems with large input sizes
+  - *Limited applicability*: All problems cann't be solved and works best for problems with optimal substructure and overlapping subproblems
 
 ![alt text](https://imgur.com/undefined.png)
 
-#### `Greedy Method v/s Dynamic Programming`:
-
+### Greedy Method v/s Dynamic Programming
 |            Feature            |      Greedy Method      |    Dynamic Programming     |
 | :---------------------------: | :---------------------: | :------------------------: |
 |           Approach            | Locally optimal choices |    Optimal substructure    |
@@ -539,18 +506,15 @@ Algorithm RBinSearch (l, h, key)
 |        Execution Speed        |         Faster          |    Slower (potentially)    |
 |   Implementation Complexity   |    Generally simpler    | More complex design needed |
 
-### `MultipleStage Graph`(Dynamic Programming):
-
+## MultipleStage Graph-(Dynamic Programming)
 - Multi-Stage Graph is a directed weighted graph where the vertices are divided into stages
 - It is useful for resource allocation
-- `Objective`:- Select the path which give minimum cost.
-
+- **Objective**:- Select the path which give minimum cost.
 ![Multi-Stage Graph-I](https://imgur.com/dX5ECL4.png)
 ![Multi-Stage Graph-II](https://imgur.com/T2TUBEj.png)
 
-### `Floyd-Warshall`(Dynamic Programming):
-
-- **Floyd-Warshall** is a dynamic programming algorithm for finding the shortest paths between all parts of vertices in weigted graph.
+## Floyd-Warshall-(Dynamic Programming)
+- *Floyd-Warshall* is a dynamic programming algorithm for finding the shortest paths between all parts of vertices in weigted graph.
 - Time complexity is `O(n^3)` (n --> number of vertices in the graph)
 
 ![Floyd-Warshall](https://imgur.com/35QE4S7.png)
