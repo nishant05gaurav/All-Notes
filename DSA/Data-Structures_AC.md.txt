@@ -1,0 +1,4 @@
+1. How would you optimize the prime-checking algorithm for very large numbers?
+// Recursive methods takes more space complexity on compare to iterative methods
+2. How does amortized analysis differ from average-case analysis, and where is it useful?
+3. Describe how you would determine the average-case complexity of an algorithm using probability.

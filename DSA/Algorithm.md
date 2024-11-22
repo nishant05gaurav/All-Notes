@@ -203,7 +203,7 @@
 ![Masters Theorem](https://imgur.com/UXE72fV.png)
 
 ## Binary Search
-- Algorithm used for finding a target value within a sorted array or list
+- Algorithm used for finding a target value within a *sorted array* or list
 - Repeatedly divide the search interval in half until the target value is found or determined to be not present in the array.
 - Here we need two index pointers: **low** and **high** and if the  low croses the high then index is not found.
 - No. of comparison are less than linear search.
@@ -270,7 +270,7 @@ Algorithm RBinSearch (l, h, key)
 ## Binary Tree
 - It is a fundamental hierarchical data structure where each node can have at most two children: a **left child** and a **right child**.
 - The topmost node in the tree is called the `root`.
-- We should a have nodes from left-right
+- We should have nodes from left-right
   ```md
            1 ---> Root (2 & 3--> its children)
          /   \
@@ -280,25 +280,27 @@ Algorithm RBinSearch (l, h, key)
   ```
   ![Binary Tree](https://imgur.com/fLHtGGi.png)
 
-- **Need and Usage of Binary Trees**:
-  - _Efficient Searching and Sorting_: Enables efficient searching (lookup in a dictionary) and sorting due to their inherent ordering.
-  - _Dynamic Data Management_: They can grow or shrink as needed, making them suitable for datasets that change over time.
-  - _Fast Access_: By following branches based on comparisons, you can quickly locate or insert data.
+### Need and Usage of Binary Trees
+  - **Efficient Searching and Sorting**: Enables efficient searching (lookup in a dictionary) and sorting due to their inherent ordering.
+  - **Dynamic Data Management**: They can grow or shrink as needed, making them suitable for datasets that change over time.
+  - **Fast Access**: By following branches based on comparisons, you can quickly locate or insert data.
 
-- *Types*:
-  1. **Full Binary Tree**:
-    - Every node (except possibly leaf nodes) has two children.
-    - All leaf nodes are at the same level.
-    - Useful for theoretical considerations or when compactness is a priority
-    - Every full binary tree is a complete binary tree
-    - ![Full Binary Tree](https://imgur.com/eqFelkz.png)
-  2. **Complete Binary Tree**:
-    - A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
-    - If we construct a complete binary tree from an array without any gaps or missing elements, it's still called a complete binary tree.
-    - A complete binary tree is a full binary tree upto a height `h-1`
-    - Efficient heap implementations and certain types of balanced binary search trees where level-order traversal is important.
-    - Height of the complete binary tree is minimum only i.e. `log n`
-    - ![Complete Binary Tree](https://imgur.com/3cYlwSK.png)
+### Types
+1. **Full Binary Tree**:
+  - Every node (except possibly leaf nodes) has two children.
+  - All leaf nodes are at the same level.
+  - Useful for theoretical considerations or when compactness is a priority
+  - Every full binary tree is a complete binary tree
+  
+     ![Full Binary Tree](https://imgur.com/eqFelkz.png)
+2. **Complete Binary Tree**:
+  - A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
+  - If we construct a complete binary tree from an array without any gaps or missing elements, it's still called a complete binary tree.
+  - A complete binary tree is a full binary tree upto a height `h-1`
+  - Efficient heap implementations and certain types of balanced binary search trees where level-order traversal is important.
+  - Height of the complete binary tree is minimum only i.e. `log n`
+    
+   ![Complete Binary Tree](https://imgur.com/3cYlwSK.png)
 
 ## Heap
 - A heap is a specialized tree-based data structure designed for efficient retrieval of the minimum or maximum element.
