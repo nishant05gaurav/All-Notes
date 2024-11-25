@@ -300,7 +300,7 @@ Algorithm RBinSearch (l, h, key)
   - Efficient heap implementations and certain types of balanced binary search trees where level-order traversal is important.
   - Height of the complete binary tree is minimum only i.e. `log n`
     
-   ![Complete Binary Tree](https://imgur.com/3cYlwSK.png)
+     ![Complete Binary Tree](https://imgur.com/3cYlwSK.png)
 
 ## Heap
 - A heap is a specialized tree-based data structure designed for efficient retrieval of the minimum or maximum element.
@@ -327,16 +327,16 @@ Algorithm RBinSearch (l, h, key)
     - *When to Use*
     1. Finding the shortest path in Dijkstra's algorithm for graph traversal.
     2. Implementing the Prim's algorithm for finding the minimum spanning tree.
-    ```md
-           8
-          /  \
-        10    16
-        / \   / \
-       15 30 20 50
+      ```md
+               8
+              /  \
+            10    16
+            / \   / \
+           15 30 20 50
 
-    Index:  0   1   2   3   4   5   6
-    Array: [8, 10, 16, 15, 30, 20, 50]
-    ```
+        Index:  0   1   2   3   4   5   6
+        Array: [8, 10, 16, 15, 30, 20, 50]
+      ```
 
 ### Insertion Element in Heap
 - Add new element as a leaf at the below most position
@@ -373,12 +373,12 @@ Algorithm RBinSearch (l, h, key)
      - Continue extracting the maximum element & place it at the end of the sorted portion & size reduced by 1
   5. **Get Sorted Array**: The entire array becomes sorted. The largest element is at the end, the second largest is second to last, and so on.
 
-### Heapify:
+### Heapify
 - Process of creating heap from an array
 - **Main idea** is to start from the last non-leaf node (i.e., the parent of the last element) and repeatedly heapify each subtree to build the heap from the bottom up.
 - Time Complexity: `O(log n)`
 
-## Priority Queue:
+## Priority Queue
 - A priority queue (**Prioritizing Elements for Efficient Processing**) is a data structure where elements have priorities and they can be inserted or deleted accordingly
 - Smaller the number higher the priority [MIN HEAP]/ Larger the number higher the priority [MAX HEAP]
 - Heap is the best DS for implementing priority queue

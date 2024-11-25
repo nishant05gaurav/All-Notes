@@ -126,9 +126,17 @@ DBMS follows ***ACID*** rule during transaction and these are as follows:
 
 - These are the units that describe the characteristics of entites
 - For each attribute there is a set of permitted values called domain
-- In er diagram, represented by ellipse or oval, while in relational model by separate column
+- In ER diagram, it is represented by *ellipse* or _oval_, while in relational model by separate column
   ![alt text](https://imgur.com/4xnx42M.png)
-- A relationship can also possible among those entity which lie on sinlge entity
+- A relationship can also possible among those entity which lie on single entity or among entities within the same entity sets.
+  - These are called __recursive relationships__ or __self-referential relationships__
+  - It occurs when an entity in an entity set is related to another entity of same set. Hence, represent hierarchical or peer-to-peer relationships within a single type of entity
+    ```xml
+    Alice (CEO)
+    └─ Bob (Manager)
+       ├─ Charlie (Developer)
+       └─ Diana (Developer)
+     ```
 
 ### `Relationship`:
 
