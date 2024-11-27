@@ -358,3 +358,10 @@ cout << vec.at(2);   // 45
 - How **vectors** are created inside the memory:
   ![alt text](image.png)
 
+## Sub-Array
+
+- Sub-Array are the continous part of an array
+- If an array contains __n__ number of elements then total number of possible sub-arrays: `n(n+1)/2`
+- For printing all the possible sub-arrays we need a starting index and an ending index upto which it'll print
+  ![alt text](image-1.png)
+- 
