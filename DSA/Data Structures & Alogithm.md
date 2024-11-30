@@ -18,7 +18,7 @@
 
 #### `Memory Layout of C Program`:
 
-![alt text](https://imgur.com/bHJiazx.png)
+![alt text](https://imgur.com/u0Wv4E1.png)
 
 #### `Time Complexity and Big-O Notation`:
 ![alt text](https://imgur.com/L2JUO1G.png)
@@ -40,7 +40,7 @@
 - Here, `n` is the input size, and `g(n)` is any complexity function.
 - If a function is `O(n)`, it is automatically `O(n^2)` as well! Because it satisfies the equation given above.
 
-![alt text](https://imgur.com/hUAVM0t.png)
+![alt text](https://imgur.com/mkpSvzK.png)
 
 #### **`Big Omega Notation (Ω)`**:
 - Describe an asymptotic lower bond.
@@ -50,7 +50,7 @@
 ```
 - If a function is `Ω(n^2)` it is automatically `Ω(n)` as well since it satisfies the above equation.
 
-![alt text](https://imgur.com/KeGxTlU.png)
+![alt text](https://imgur.com/hofxkjv.png)
 
 #### **`Big theta notation (θ)`**:
 - Let `f(n)` define the running time of an algorithm.
@@ -64,7 +64,7 @@
     0  ≤ c2 g(n)  ≤  f(n) ≤ c1 g(n)      ∀    n ≥ no.  
 
 ```
-![alt text](https://imgur.com/olyat4X.png)
+![alt text](https://imgur.com/a0TIw2T.png)
 - Big theta provides a better picture of a given algorithm, most of the interviewers expect you to provide an answer in terms of Big Theta when they say **Order Of** as it provides the exact posibility of the function to lie at that value. We generally use Big Oh and Big Omega when tthe exact posibility of the gfunction is not known to us
 
 ![alt text](https://imgur.com/J8WmSYn.png)
@@ -356,12 +356,75 @@ cout << vec.at(2);   // 45
 ```
 
 - How **vectors** are created inside the memory:
-  ![alt text](image.png)
+  ![alt text](https://imgur.com/901J4ZB.png)
 
 ## Sub-Array
 
 - Sub-Array are the continous part of an array
 - If an array contains __n__ number of elements then total number of possible sub-arrays: `n(n+1)/2`
+  ![alt text](https://imgur.com/YB3Sr02.png)
 - For printing all the possible sub-arrays we need a starting index and an ending index upto which it'll print
-  ![alt text](image-1.png)
-- 
+  ```cpp
+  int n = 5;
+     int arr[5] = {1, 2, 3, 4, 5};
+     int st, end;
+
+     for (st = 0; st < n; st++)
+     {
+        for (end = st; end < n; end++)
+        {
+           for (int i = st; i <= end; i++)
+           {
+              std::cout << arr[i];
+           }
+           std::cout << " ";
+        }
+        std::cout << endl;
+     }
+  ```
+
+### Kadanes's Algorithm
+- Principle: We should not add a big negative number to get a positive value
+- We need to reset the sum of subarray to `0` if its value becomes negative
+```cpp
+int maxSubArray(vector<int> &nums)
+{
+    int max_sum = INT_MIN;
+    int array_sum = 0;
+
+    for (int val : nums)
+    {
+        array_sum += val;
+        max_sum = max(array_sum, max_sum);
+
+        if (array_sum < 0)
+        {
+            array_sum = 0;
+        }
+    }
+    return max_sum;
+};
+```
+- Steps:
+1. Initialization of max_sum:
+- I have initialized max_sum with `INT_MIN` (the smallest possible value) to ensure it can accommodate any sum.
+- __Principle__: Start with the smallest possible value so that any sum from the array will be larger.
+2. Initialization of array_sum:
+- I have initialized array_sum as 0 to begin the accumulation of the current subarray sum.
+- __Principle__: Start from zero, and reset when the sum turns negative because adding a negative sum would decrease the overall result.
+3. Update max_sum:
+- I updated max_sum to be the maximum array_sum and max_sum during each iteration.
+- __Principle__: Always track the largest sum encountered so far.
+4. Reset array_sum when it becomes negative:
+- The reset array_sum to 0 when it becomes negative.
+- __Principle__: A negative sum doesn't help form a larger subarray sum, so it's better to start fresh from the next element.
+
+### Moore's Voting Algorithm
+#### eg: `1 2 2 1 1`
+![alt text](https://imgur.com/2PBzjuH.png)
+
+### Pow(X,N) Power exponential Problem
+![alt text](https://imgur.com/RFq1rre.png)
+
+### Buy and Sell Stock Problem
+![alt text](https://imgur.com/ep6STpD.png)

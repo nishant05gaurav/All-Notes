@@ -366,17 +366,16 @@ These are the basic rules of functional dependencies
 - Always make a separate table for PK
   - R3(A B C)
 
+![2NF](diagram-export-11-30-2024-12_42_45-AM.png)
+
 ### 3 Normal Form
 
-- A table is said to be in **3NF**, if there is no transitive dependency for non-prime attributes as well as it is in the second normal form
-- A relation is in 3NF if at least one of the following conditions holds in every non-trivial function dependency X –> Y.
-
-- C is a nonprime attribute and it's finding D in other nonprime attribute it's a case of transitive Dependency
-- Translative dependency : A functional dependency from alpha to beta is called transitive if alpha and beta both belongs to non prime
-  - happens when non prime finds another non Prime
-- 
+- A table is said to be in 3NF, if there is no **Transitive Dependency** for non-prime attributes as well as it is in the second normal form
+- A relation is in 3NF if at least one of the following conditions holds in every non-trivial function dependency `X –> Y`
+  - `X` is a super key
+  - `Y` is a Prime Attribute (each element of Y is part of some candidate key)
 - 3rd normal form do not allow transitive Dependency
-- AB instead of finding D directly. Its finding D in a transitive manner, as its firstly finding C then for C it will find D but there is a possibility when C becomes null then AB will be unable to find D and the promise that the candidate key always finds all the attributes becomes fail
+![alt text](diagram-export-11-30-2024-1_19_57-AM.png)
 
 ### BCNF(Boyce-Codd Normal Form)
 - If there is a dependency from Alpha to beta where Alpha is prime attribute or nonprime attribute and beta is prime attribute in this case we deals with BCNF it covers these cases 
