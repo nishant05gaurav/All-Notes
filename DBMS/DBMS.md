@@ -43,26 +43,23 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 
 1. **Atomicity**: If transaction gets fullfill then its get add back to DBMS else it gets roll back
 2. **Consistency**:
-
 - Follows rules and constrains
 - Changes from one valid state to another
 - Maintains Data Integrity
   > Data Integrity: The process of ensuring that data is accurate, complete, consistent, and valid
 
 3. **Isolation**:
-
 - Transactions are independent
 
 4. **Duraible**:
-
 - Not deleted unless we did it
 - Change persists
 
 - Understand using example of transaction:
-  - Atomicity: Lets say we are performing a transaction in Gpay, if the transaction gets successful then and only then its getting add back to DBMS or else it gets rolled back
-  - Consistency: Here, using consistency we are drafting the information in specific columns like name in alphabets and amounts in balance
-  - Isolation: Performing transactions from two different bodies like Gpay and PhonePay
-  - Duriable: Every transactions are written either it is done or not
+  - _Atomicity_: Lets say we are performing a transaction in Gpay, if the transaction gets successful then and only then its getting add back to DBMS or else it gets rolled back
+  - _Consistency_: Here, using consistency we are drafting the information in specific columns like name in alphabets and amounts in balance
+  - _Isolation_: Performing transactions from two different bodies like Gpay and PhonePay
+  - _Duriable_: Every transactions are written either it is done or not
 
 ## Disadvantages of using File System
 
@@ -112,7 +109,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - Consists of basic objects called `entity` and a `relationship` among their objects and `attributes` that defines their properties
 - Free from ambiguties and provides a standard and logical way of visuaizing data
 - Basically, it is a diagramatical represenataion that are easy to understand even by non-technical users
-  ![alt text](https://imgur.com/jIA80Ns.png)
+  ![alt text](.png)
 
 ## Entity
 
@@ -143,7 +140,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - These are the units that describe the characteristics of entites
 - For each attribute there is a set of permitted values called domain
 - In ER diagram, it is represented by _ellipse_ or _oval_, while in relational model by separate column
-  ![alt text](https://imgur.com/4xnx42M.png)
+![alt text](diagram-export-12-1-2024-9_10_03-AM.png)
 - A relationship can also possible among those entity which lie on single entity or among entities within the same entity sets.
   - These are called **recursive relationships** or **self-referential relationships**
   - It occurs when an entity in an entity set is related to another entity of same set. Hence, represent hierarchical or peer-to-peer relationships within a single type of entity
@@ -159,7 +156,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - It is an association between two or more entites of same or different entity set
 - No representation in ER Diagram as it is an instance or data
 - In relational model, reprsented by either using a row in a table
-  ![alt text](https://imgur.com/12qZlXV.png)
+  ![alt text](diagram-export-12-1-2024-11_09_48-AM.png)
 - `1:1` - At most have 1 relation and its not necessary to participate
 - `1:M` & `M:1`: - At most n participation
   ![alt text](https://imgur.com/Zwiujye.png)
@@ -267,16 +264,16 @@ These are the basic rules of functional dependencies
 - If F ≠ G: F and G have different functional dependencies.
 ```
 
-### Irreducible set of Fd(conical Form)
+### Irreducible set of FD(conical Form)
 
-- In the given set of Fd, there exist some redundant element, and we need to remove them
-- **`Redundant**:Their presence and existance don't affect the capability of the Fd
+- In the given set of FD, there exist some redundant element, and we need to remove them
+- __Redundant__: Their presence and existance don't affect the capability of the Fd
 - There are three cases of Redundancies:
-  - On the left side of the Fd
-  - On the right side of the Fd
+  - On the left side of the FD
+  - On the right side of the FD
   - Entire set
 
-![alt text](diagram-export-11-26-2024-9_00_51-AM.png)
+![alt text](/DBMS/images/diagram-export-11-26-2024-9_00_51-AM.png)
 
 - Steps:
   - First write separately using Decomposition rule wherever more than 1 attribute is present on the right-hand side
@@ -294,12 +291,12 @@ These are the basic rules of functional dependencies
         - if the values comes ssame in either on (i.e, in each attribute) with the closure (as a whole). Then this dependency is redundant
 - for the same set of fd there exists more than 1 conical form and that depends on order you are performing the operation
 
-### KEYS
+## KEYS
 
-- **Need**: For the retrival of data from the databse.
-- Key (either single/ set of attribute) must identify the row/ tupple of the database
 - Key is a set of attribute which uniquely identify the row and a tupple in a relationship table
-- `Key` ≡ `SuperKey`; Its closure always give all the attributes
+- Key (either single/ set of attribute) must identify the row/ tupple of the database
+- **Need**: For the retrival of data from the databse.
+- *Key* ≡ *SuperKey*; Its closure always give all the attributes
 
 ### Candidate Key
 
