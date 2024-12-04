@@ -20,7 +20,7 @@
 
 `With the help of an example`: An algorithm, like a recipe, needs clear instructions (**definiteness**) to process information (**input**) and achieve a specific goal (**output**). Just like a recipe shouldn't take forever to bake (**finiteness**), an algorithm should run in a reasonable amount of time. The best recipes, like the best algorithms, are also efficient (**effectiveness**), using the least amount of ingredients and steps to get the job done.
 
-`Analyzation of Algorithm`:
+### Analyzation of Algorithm
 - **Time**
   - In form of time function
   - Every statement in an algorithm takes 1 unit of time
