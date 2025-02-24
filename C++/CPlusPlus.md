@@ -30,14 +30,14 @@
 1. **Encapsulation**: Wraping up of data and fxn into a single unit
 2. **Data Hiding**: The principle of restricting access to the internal state and implementation details of a class, typically achieved by using access specifiers like *private* and *protected*
 3. **Abstraction**: Hiding the complex implementation details of a system and exposing only the necessary and relevant features
-4. **Polymorphism**: Allows a function, method, or an object to take on many forms, enabling a single interface to represent different underlying data types or classes, typically achieved through inheritance and function overriding
-5. **Inhertiance**: Concept where a new class (derived class) is created from an existing class (base class), allowing the derived class to inherit and optionally override or extend the properties and behaviors (methods) of the base class
-6. **Data Abstraction**: Process of reducing a body of data to a specific representation of whole. Classes use the concept of data abstraction, known as Abstract Data Types
+4. **Polymorphism**: Allows a function, method, or object to take on many forms, enabling a single interface to represent different underlying data types or classes, typically achieved through inheritance and function overriding
+5. **Inheritance**: Concept where a new class (derived class) is created from an existing class (base class), allowing the derived class to inherit and optionally override or extend the properties and behaviors (methods) of the base class
+6. **Data Abstraction**: Process of reducing a body of data to a specific representation of a whole. Classes use the concept of data abstraction, known as Abstract Data Types
 
 ## Concept of Classes and Objects
-- **Class** is a blue-print of an object while **Object** is a run time entity and is an instance of a class
+- **Class** is a blueprint of an object while **Object** is a run time entity and is an instance of a class
 - Class is a description of Object's property set and set of operations
-- Creating class is as good as defining a new data type 
+- Creating a class is as good as defining a new data type 
 - Class is a means to achieve encapsulation
 - Class members are by default private
   
