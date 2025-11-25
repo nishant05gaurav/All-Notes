@@ -423,8 +423,24 @@ int maxSubArray(vector<int> &nums)
 #### eg: `1 2 2 1 1`
 ![alt text](https://imgur.com/2PBzjuH.png)
 
+
+![alt text](image.png)
+
 ### Pow(X,N) Power exponential Problem
 ![alt text](https://imgur.com/RFq1rre.png)
 
 ### Buy and Sell Stock Problem
 ![alt text](https://imgur.com/ep6STpD.png)
+
+### Binary Search
+- Binary Search is applied only on monotonic functions (where values will be either in asceding or descending)
+- 
+
+
+
+
+
+
+
+### Linked list
+- 

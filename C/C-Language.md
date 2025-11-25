@@ -698,8 +698,7 @@ as
   - Concentration of **a`##`b** is `ab`
   ```c
   #define ACTION(a, b) a##b+a*b
-  int main()
-  {
+  int main(){
     printf("%d", ACTION(3, 4));
   }
   ---
@@ -708,6 +707,68 @@ as
   // --> 34 + 3 * 4 = 46
   ```
 
-### `File Handling`:
+## `File Handling`:
 - File handling is read and write of data
-  - If we make variable in a program and we want that after execution of programme, the data 
+  - If we make variable in a program and we want that after execution of programme, the data (variable) remain with us then we have to give the data or put the data in file for future use. It will get stored in secindary memory
+  ![alt text](image.png)
+  - ptr will point the file as in ram it cannot be accessed by its name but can be accessed by address of its first bytes
+- Data-typr for file handling is in `stdio.h`
+
+### Writing a file in C
+- When a biffer gets full it gets closed and new buffer start
+- It writes statements in file line by line
+- If we cannot completely fill buffer, we write `fclose()` at the end to indicate end of buffers
+  - `fopen()`: 
+    - It creats buffer and creates file variable
+    - It also returns the address of file. 
+    - To keep the return value, we need to do: `fp = fopen()`
+  ```cpp
+    #include<iostream>
+    int main()
+    {
+      FILE *fp;
+      char s[] = "Hello Students";
+      fp = fopen ("f1.txt",w);
+      if(fp == NULL){
+        printf("File cannot open");
+        exit(1);    // showing that the file has normally terminated
+      }
+      for(int i = 0; i<strlen(s); i++){
+        fputs(s[i], fp);  // used to write content (s[i]) into file i.e. "fp"
+      }
+      fclose (fp);
+    }
+
+    // OUTPUT: Hello Students --> written in f1.txt
+  ``` 
+
+### Reading from a file: fgetc(c)
+- Reads one charcater at a time
+- reading from a file means extracting data from a file to our program variable
+- This will not remove data from the file toour program variable
+- This will not remove data from the file
+- Reads string by string
+```cpp
+fgets (str, n, fp);
+        |   |_
+        |     |_ no. of characters in string
+        v
+address of string that we want to put in char array        
+```
+- `fgets` return NULL value when it reads EOF
+```cpp
+#include<iostream>
+int main()
+{
+  char str[10];
+  FILE *fp;
+  fp = fopen("f1.txt","r");
+  if(fp == NULL){
+    printf("File Not Found");
+    exit(0);
+  }
+  while(fgets (str, a, fp) != NULL){
+    printf("%s", str);
+  }
+}
+```

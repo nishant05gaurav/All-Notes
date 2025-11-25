@@ -11,13 +11,13 @@
 
 ## Data vs Information
 
-| **Data**                                                               | **Information**                                        |
-| ---------------------------------------------------------------------- | ------------------------------------------------------ |
-| Collection of facts                                                    | Put those facts into context                           |
-| Raw and unorganized                                                    | Organized                                              |
+| **Data** | **Information** |
+ --- | --- 
+| Collection of facts | Put those facts into context |
+| Raw and unorganized | Organized |
 | Typically come in the form of graphs, numbers, figures, and statistics | Typically presented through words, language, and ideas |
-| Doesn't depend on information                                          | Depend on information                                  |
-| Insufficient for decision-making                                       | Make decision based on information                     |
+| Doesn't depend on information | Depend on information |
+| Insufficient for decision-making | Make decision based on information |
 
 ## Database
 
@@ -36,6 +36,7 @@
   - Store and retrieve database information i.e, both convenient and efficient
 - It is a database with all the software and functionality.
 - By using this we can perform operations such as addition, updation, deletion, and accessing of data
+- It provodes the facility of accessing data from dataabase through **DML**
 
 ## Rules followed by DBMS during transaction
 
@@ -109,11 +110,11 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - Consists of basic objects called `entity` and a `relationship` among their objects and `attributes` that defines their properties
 - Free from ambiguties and provides a standard and logical way of visuaizing data
 - Basically, it is a diagramatical represenataion that are easy to understand even by non-technical users
-  ![alt text](.png)
+  ![alt text](diagram-export-11-30-2024-11_04_32-PM.png)
 
 ## Entity
 
-- An entity is a thing or an object in the real world that is distingaishable from other objects based on the values of the attributes it posseses
+- An entity is a thing or an object in the real world that is distinguishable from other objects based on the values of the attributes it posseses
 - class is same as object and entity as ID (HTML/CSS)
 - **Types**:
   - _Tangible_: Entities which physically exist in real world. eg: Car, Pen, Banklocker
@@ -122,7 +123,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
   - It avoids data duplication caused by duplicating these of a strong entity
 - **Strong Entity**: An entity set that contains sufficient attributes to uniquely identify all its entities
   - Primary keys exist in it
-- An Entity cannot be represented in an er diagram as it is only an instance or schema
+- An Entity cannot be represented in an ER Diagram as it is only an instance or schema
 
 ## Entity Set
 
@@ -159,7 +160,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
   ![alt text](diagram-export-12-1-2024-11_09_48-AM.png)
 - `1:1` - At most have 1 relation and its not necessary to participate
 - `1:M` & `M:1`: - At most n participation
-  ![alt text](https://imgur.com/Zwiujye.png)
+  ![alt text](diagram-export-12-15-2024-11_49_28-AM.png)
 - Every **1:1** is **M:1** and **1:M**
 
 ## Relationship set
@@ -273,7 +274,7 @@ These are the basic rules of functional dependencies
   - On the right side of the FD
   - Entire set
 
-![alt text](/DBMS/images/diagram-export-11-26-2024-9_00_51-AM.png)
+![alt text](https://imgur.com/dJ4LZ5j.png)
 
 - Steps:
   - First write separately using Decomposition rule wherever more than 1 attribute is present on the right-hand side
@@ -311,7 +312,7 @@ These are the basic rules of functional dependencies
 - It is that candidate key which is selected by the administrator as the primary mean to identify tuples
 - It's number is only one
 
-![alt text](https://imgur.com/kY0tFQe.png)
+![alt text](https://imgur.com/CjbySGI.png)
 ![alt text](https://imgur.com/V9IsB1j.png)
 
 ## Normalization
@@ -363,7 +364,7 @@ These are the basic rules of functional dependencies
 - Always make a separate table for PK
   - R3(A B C)
 
-![2NF](diagram-export-11-30-2024-12_42_45-AM.png)
+![2NF](https://imgur.com/WQH6xdk.png)
 
 ### 3 Normal Form
 
@@ -375,14 +376,430 @@ These are the basic rules of functional dependencies
 ![alt text](diagram-export-11-30-2024-1_19_57-AM.png)
 
 ### BCNF(Boyce-Codd Normal Form)
-- If there is a dependency from Alpha to beta where Alpha is prime attribute or nonprime attribute and beta is prime attribute in this case we deals with BCNF it covers these cases 
+- If there is a dependency from Alpha to beta where Alpha is prime attribute or nonprime attribute and beta is prime attribute in this case we deals with BCNF
 -  Rules for BCNF
-   -  The table should be in the 3rd Normal Form.
-   -  X should be a superkey for every functional dependency (FD) X−>Y in a given relation.
+   -  The table should be in the 3rd Normal Form
+   -  `X` should be a `superkey` for every functional dependency (FD) `X−>Y` in a given relation.
 - By using BCNF, a database will remove all redundancies based on functional dependencies
-- 
 - It was developed to address anomalies that 3NF couldn't resolve
 - BCNF tables are also 1NF, 2NF, and 3NF
+  ![alt text](diagram-export-12-12-2024-11_23_27-PM.png) 
 - A table can be in 3rd normal form but not in BCNF:
-
 - Sometimes, when we decompose a table, it can happen that some dependencies from the child table do not propagate. This is called a dependency that is not child-preserving. This typically occurs when the table is in 3rd normal form (3NF) or Boyce-Codd normal form (BCNF). Such issues are not possible in 1st normal form (1NF) or 2nd normal form (2NF).
+  ![alt text](diagram-export-12-12-2024-11_17_40-PM.png)
+
+### Lossless Join Decomposition || Non-Additive Decomposition:
+- If you decompose one table into more than one table during normalization, and when you combine them, you should get the original table back, but that doesn't happen, so decomposition is lossy.
+- When you further convert the parent table into child tables, and when you combine them to get the parent table back, it doesn't fully return, and this is what is referred to as lossy decomposition.
+- It is a mandatiry property that always holds good
+- It guarantees that the extra/ loss row generation problem doesn't occur after decomposition
+  ![alt text](diagram-export-12-13-2024-8_10_34-PM.png)
+  - Extra tupple or less tupple bith are wrong (no-lossless)
+- Important:
+  - If the common attribute in both the table is `CK` then there is no _lossy decomposition_
+  - All attributes must be present in the child table
+  - There must be some kind of common attribute present in both the tables
+  - Only common is not the only thing, that common attribute must have unique and distinct values
+  ![alt text](image-1.png)
+- __dependency Preserving__: When we combine 2 relational tabel then, if the final Functional Dependency will be equal to the Functional Dependency of the parent table
+
+
+## File Structuring 
+- Files can be stored in random or sequential manner in a block and also in sorted or unsorted manner
+- Files are stored in secondary memory in three ways:
+  - Contigous
+  - linked
+  - Index( speed fast && no external fegmentation)
+    - We generally use __index__ allocation. Here, every index is treated as special node and store address of every block where we store address
+- Sometimes some record couldn't get stored in a block then its spanned and unspanned allocation
+- A relational is nothinmg but a set of cartesian product
+- A relational is itself a set(unordered structure)
+- We will store the `I` record in a block only when it is completely coming; otherwise, we will store it separately to avoid wasting memory.
+
+| **Stored Method** | **Unstored Method** |
+ --- | --- 
+| In manner of a key/ column then other may/ may not be in stored order (Generally stored using key that is mnostly used) | Search is complex (linear search)  |
+| Compratively easier access (Binary Search) |  |
+| Insertion and deletion is complex than unsorted method | Insertion and deletion is easier |
+
+| **Spanned Mapping** | **Unspanned Mapping** |
+| --- | --- |
+| No wastage in memory, records can be broken into parts | Only store when we can store whole record in the block |
+| Search time is more | Leads to internal fragmentation |
+| Less used ( memory - waste :: time - wastage) | Insertion and deletion is easier (more used) |
+
+## Indexing
+- For searching a record: we have two things `block` and `record`
+- Block search time `>` record in a block search
+  - Block Search time = `log n`
+- To get faster access, we use index (index-table) similar as book-indexing
+- We may apply binary search in case of sorted block 
+  - This is also time consuming if the number of blocks is very much
+  ![alt text](diagram-export-12-14-2024-10_22_43-PM.png)
+- Sparse Indexing: 
+  - It is possible when every record from the main file don't get entry in the index file
+  - Only store one `SK` and `BP` of a record block
+- Dense Indexing:
+  - It is possible when every record from the main file get entry in the index file
+  - It is possible in un-sorted file
+  - When we store whole `SK` and `BP's` of entire record block
+- Indexing does not affect the structure or content of the main file
+- It is an optional Method
+- It's always a secondary mean to identify tupple
+
+### Types of Indexing
+1. Primary Indexing
+2. Cluster Indexing
+3. Secondary Indexing
+4. Multi-Level Indexing
+
+### Primary Indexing
+- Possible only when the main file is sorted ( sorted according to Primary Key)
+- Example of Sparse Indexing
+- The anchor attribute used in the index file for searching should be a key attribute because it points to the primary key of the main file.
+- Number of enteries in index file is equal to the number of blocks acquired by the main file
+- Number of access = `log n + 1` block
+
+![alt text](diagram-export-12-15-2024-12_06_11-AM.png)
+
+### Clustering Indexing
+- Main file is stored on some non-primary key attribute 
+- repeated value can be found
+- There will be one entry for each unique value of non-key attribute
+- If number of blocks acquired by index file is `n`, then block access = `log n + 1`
+- It can be sparsed or densed
+
+### Secondary Indexing
+- It can be done on keys as well as non-key attribute
+- Dense Indexing
+- No. of blocks access  >= `log n + 1`
+- No. of entry in IF = no. of entry in main file
+![alt text](diagram-export-12-15-2024-12_22_16-AM.png)
+
+![alt text](diagram-export-12-15-2024-9_29_02-PM.png)
+
+## Query Language
+- Language in which user request some information from database
+
+| **Procedural Query Language** | **non-procedural Query Language** |
+ --- | --- 
+| User gives process and operations to produce result | User gives only desired information without giving process to extract it |
+| User tells what data to be retrieved and how |  |
+
+  ![alt text](diagram-export-12-15-2024-10_30_42-PM.png)
+- We use RDBMS (practical implementation of relational model) and SQL is used to write queries on it
+- Relational algebra and relational calculas arew mathematical system/ query language used on Relational Model
+
+### Relational Algerbra
+- It is similar to  mathematics [ operations (basic + derived) ; operands (table)]
+- Take one or two relations (tables) as input, generate a single _output_ table (relations) with __no-name__
+- It supports no duplicacy as based om set-theory
+- Here, use of `English` keywords are avoided
+- **Basic or Fundamental Operations**
+  - They are capable of writing any kind of queries
+  - These are sometimes called Functinally complete
+  - They are as follows:
+    1. `Select`: ( σ )
+    2. `Project`: ( π )
+    3. `Union`: ( ∪ )
+    4. `Set Difference`: ( − )
+    5. `Cartesian Product`: ( × )
+    6. `Rename`: ( ρ )
+- **Derived Operators**
+  - These are used to make the queries efficient
+    - They are as follows:
+      1. `Natural Join`: ( ⋈ )
+      2. `Intersection`: ( ∩ )
+         * ( X ∩ Y) = X - (X - Y) 
+      3. `Division`: ( ÷ or / )
+
+#### Select ( σ )
+- A unary-fundamental oprator, works on one table at a time
+- Main idea of select is to find `rows || tuples` in a relation (Horizintal Search) 
+- Its function is same as where clause of SQL
+- Syntax: σ$_{condition/predicate}$(table name)
+- minimum row selected = 0
+- maximum row selected = all
+![alt text](diagram-export-12-15-2024-11_05_34-PM.png)
+- Nesting: 
+  - σ$_{condition}$(σ$_{condition}$(table name))
+  - σ$_{condition}$ ^/V σ$_{condition}$(table name)
+
+#### Project ( π )
+- It used to extract specified column data
+- It is an unary and fundamental operator
+- Synta: π$_{column name}$(table name)
+- Nesting: 
+  - π$_{name1, name2}$(table name)
+- When using the `σ` as well as `π` operators together : always `σ` is first then `π`
+- To select all column [ $_{select}$* ] || (branch) || (table name)
+- Example:
+  - Find names of all the students from CS branch
+    - σ$_{branch = 'CS'}$(π$_{name}$(student)) ---> `wrong`
+    - π$_{name}$( σ$_{branch = 'CS'}$(student)) ---> `correct`
+
+## Transaction
+
+- These are the set of operations used to perform logical unit of work
+- Basically a set of logically related instructions. It contains a group of tasks/ instructions. All the instructions of a transaction must be performed
+- These are the programs in terms of DBMS
+- If an interrupt happens in between the instruction-set then we need to *undo* all instructions happend. It's called **roll-back**
+- It deals with the maintainance of database
+- Transactions are always atomic in nature
+
+### ACID Properties:
+- These properties helps to maintain the consistency of transaction 
+  - **Atomicity**: 
+    - It means either all transaction become successful or none
+    - Transactions cannot occur partially
+    - *Transaction Management Component* ensures the atomicity of DBMS
+    - It has two major componennt:
+      - *Abort*: If a transaction is abort, all changes made are not visible
+      - *Commit*: If a transaction is commited, all changes made are visible
+  - **Consistency**:
+    - It ensures bringing database from one consistent state to another consistent state
+    - Its execution will leave the database in either its prior stable state/ new stable state
+    - No component takes care of this, it will always hold true if all the three-properties are satisfied
+  - **Isolation**:
+    - it ensures tthat instructions is isolated from other  transaction
+    - Data used at time of execution of a transaction cannot be used by second transaction until first one is completed
+    - *Concurrency Control System* takes care of it
+  - **Durability**:
+    - It means once a transaction has been commted it will remain so, even in the event of errors/ power loss
+    - *Recovery Subsystem* takes care of it
+
+### Transaction State:
+![alt text](diagram-export-1-22-2025-7_29_21-PM.png)
+  - Ac: First state of every transaction (RAM)
+  - Pc: Transaction executes its final step, but data is not saved to the database
+  - C: All operations are executed successfully, all the effects are permanently saved in database
+  - F: If any checks of dbms fails
+  - Ab: If failed state is achieved, then the recover system will make sure thar database is in its previous stable state
+
+- After aborting, database recovery module will choose: 
+  - Restart the transaction
+  - Kill the transaction
+  - Free all the occupied resources
+
+### Concurrency:
+- When more than one transaction run at a time
+- Advantage:
+  - Waiting time dectreases
+  - Response time dectreases
+  - Resource utilization is better
+  - Efficiecy increases
+- Disadvantages:
+  - In case of concurrency, management is complex
+  - Uncommited data 
+  - Temporary update problem
+  - Phantom read problem 
+
+### Dirty Read Problem
+
+- It is also called *Uncommited Read* as well as *Reasd After Write* 
+- When a transaction reads data that is being modified by another transaction (i.e, running concurrently and not yet committed)
+  ![alt text](image-7.png) 
+  - Here, Reader should commit first
+- To overcome any failure and probllem, dirty reader shouuld commit its changes after commitment of the transaction that it is using 
+
+### Unrepeatable Read
+- It occurs when two/ more read operation of some transaction read different values of same variable 
+  ![alt text](image-2.png)
+
+### Phantom Read Problem
+- When a transaction reads a variable once but when it tries to read it again an eerror happens saying that the variable doesn't  exist anywhere
+  ![alt text](image-3.png)
+
+### Lost update Problem
+- It happens at the time of Write-Write Conflict
+- When two different transaction, try to update the same column on the same row within same time
+  ![alt text](image-4.png)
+
+### Serial and Non-Serial Scheduling
+
+- Schedule: 
+  - A series of operations from one transaction to another transaction 
+  - It helps to preserve order if operations
+  - Types:
+    - Serial
+    - Non-Serial
+    - Serializable
+- Serial: 
+  - A type of schedule where one transaction is executed completely befoe starting the another transaction 
+    ![alt text](image-5.png)
+- Non-Serial:
+  - Interleaving of operations (switching b/w different transactions)
+    ![alt text](image-6.png) 
+- Serailizable:
+  - Seriazability of schedules is used to find non-serial schedules that allow the transaction to execute concurrently without interleaving one-another
+  - If non-serialized schedule results same as serialized schedule then it is called serializable
+
+### Conflict Serializability
+- A schedule is conflict serializable if after swapping of non-conflicting operations, it can transform into serial schedule
+  ![alt text](diagram-export-1-25-2025-11_41_30-PM.png) 
+
+### View Serializability
+- In case of CS, if there is a loop, then the transaction may/ may not be serializable. So, we cheeck view serializable
+
+- If our non-serial schedule is view equivalent to some other serial schedule. Then the schedule is called view serializable
+- How to check (VS)
+  - Initial read should be same
+  - Final read should be same
+  - Mid-sequence should be same as well
+  
+![alt text](diagram-export-3-3-2025-9_53_16-PM.png)
+
+### Recoverability of Schedule
+- Schedules are normally of three types namely: Cascadless, Recoverable and Non-Recoverable
+- Schedules in which transactions commit only after all the transactions that made dirty read are committed.
+- Basically, the Dirty-Read retransaction should commit after original read transactions
+  - Check:
+    - It's no dirty read then always recoverable as there will be no dependency
+    - Dirty-Read transaction shouldn't commit first
+  - Recoverability is necessary
+- *Recoverable*: If during non-conflicting consistent transaction, a failure happens and results in unwanted change in database. Then, if we can recover back out data is called recoverable schedule.
+- *Non-Recoverable*: vice versa
+- *Cascading Schedules*: If in a schedule failure of one transaction causes several other dependent transaction to rollback or abort then schedule is called cascading schedules. It simply leads to the wastage of CPU
+- Strict Schedules: A transaction is neither allowed to read nor write a data item until the last transaction that has written it is committed or aborted.
+- It allows read or write only on committed data
+
+### Concurrency Control Techniques:
+- It is a procedure of managing simultaneous operations without conflicting with each other 
+- We will study protocols that generate schedules which satisfy properties of consistent schedules especially conflict serializability 
+- Actual problem is different transaction try to access data at the same time 
+- Approaches to cs 
+  - Time stamping protocol 
+  - Lock based protocol 
+    - 2PL 
+    - Graph based 
+  - Valid protocol 
+- Goals: Concurrency, properties, time, logic
+
+### Time stamping ordering protocol:
+- Used to order transactions based on their timestamps. Order is in ascending mode of transaction creation.
+- To determine time-stamp, this protocol uses time or logic counter 
+- log K based protocol is used to manage the order between conflicting pairs of transactions I
+- It also maintains timestamps of last rate or write operations 
+- Basic idea is to decide order of transactions before it enters into the system 
+- For stamping, we use system-call: (Two time stamps are possible)
+  - Time-stamp with transaction: Unique for a transaction and usually the time at which transaction enters the system
+  - Time-stamp with data items: for a data item 'Q', protocol maintains two timestamps:
+    - W-time stamp [W(Q)]: it is the largest time stamp of any transaction that executed right operation successfully (Basically the latest transactions that successfully used write operations on that data) 
+    - R-time stamp [R(Q)]: similarly 
+  - Hence the juniors should be given preference
+  - 
+- Properties achieved using T.S.P:
+- conflict serializability 
+- view serializability 
+- possibility of dirty read 
+- no restrictions on commit 
+- non recoverable (possible) and cascading rollbacks (possible)
+- no idea of deadlock (coz no wait only yes or no) 
+- May suffer from starvation (coz rollback due to timestamp) and relatively slow
+
+### Thomas Write Rule
+- It guarantee serializability order protocol
+- If younger has performed rate or right then older should not perform rate and write on that value as it violates this realizability and may lead to inconvenient and inconsistent database
+- Rules:
+  - Transaction Ti issues Read(A) operation:
+    - if WTS(A) > TS(Ti), rollback Ti
+    - otherwise execute R(A) operation
+      - set RTS(A) = Max { RTS(A), TS(Ti)}
+  - Transaction Ti issues Write(A) operation:
+    - if RTS(A) > TS(Ti), rollback Ti
+    - if WTS(A) > TS(Ti), rollback Ti
+    - otherwise execute W(A) operation ans set WTS(A) = TS(Ti)
+
+### Lock Based Protocol
+- To achieve consistency isolation is the most important idea locking is a simple idea to achieve isolation that is first optional lock on a data item performed desired operation and then unlock it 
+- Ways to lock: 
+  - Shared mode: Denoted by lock-S(Q), transaction can perform read operation and any other transaction can also obtain same data at the same time (read only)
+  - Exclusive mode: Denoted by lock-X(Q), transaction can perform both read and write operation, any other transaction cannot obtain either shared/ exclusive mode lock
+  ![alt text](image-14.png)
+  ![alt text](image-15.png)
+
+
+### 2PL (2 Phase Locking): 
+- Each transaction has 2 phases: shrinking and growing
+   ![alt text](image-12.png) 
+- In growing phase, transaction can only obtain locks but cannot release any lock (ACQUIRE)
+- In shrinking phase, transaction can only release locks but cannot acquire any lock (RELEASE)
+- transaction can perform rate or write in both the phases
+- Order of serializability = order of transactions in reaching lock point
+- May generate unrecoverable schedules and cascading rollbacks
+- Do not ensure freedom from deadlock and starvation
+  ![alt text](image-13.png)
+
+### Conservative or Consecutive or Static 2PL
+- Basic idea is to give all the necessary logs to transaction before starting other transactions hence no growing phase transaction first acquires all locks and directly start from lock point starvation can be there
+- If all locks are not available transaction must release the acquired lock so far and wait
+- We should have knowledge of all the data items we want in advance
+- no-dead lock
+- conflict-serializability and view-serializability
+- non-recoverable and cascading rollbacks - possible 
+  - dirty read is there
+  ![alt text](image-11.png)
+  
+### Rigrous 2PL:
+  ![alt text](image-10.png)
+- An improvement over 2PL where try to ensure recoverability and cascading rollbacks
+- It requires that all locks must be held until transaction commit that is no shrinking phase
+- ensures:
+  - conflict and views serializability 
+  - recoverability and cascading rollbacks 
+- suffers:
+  - Deadlock and efficiencyDeadlock and efficiency
+
+### Strict 2PL 
+- Better than Rigrous
+- In the shrinking phase unlocking of exclusive locks are not allowed but unlocking of shared locks can be done 
+- All the properties are same as rigorous but provide better concurrency and efficiency is also more
+- Since we are only unlocking shared locks (only read) then there cannot be any dirty read with the transition
+  ![alt text](image-9.png)
+
+### Graph Based Protocol
+- We need some additional information for this protocol
+- There are various models that can give us additional information each differing in the amount of information provided
+- One idea is to have prior knowledge about the order in which data items will be accessed
+- We impose partial ordering on data items set: D = {d1, d2.....dn} if di < dj then dj should be accessed after di
+- Partial order may be viewed as directed acyclic graph called database graphs
+- Restrictions on DAG:
+  - Will only study graph that are rooted
+  - Will only use exclusive lock mode
+
+### Tree protocol
+- Each data items can be logged by following rules
+  - First lock on T I can be done by any data items
+  - After that we can only locked child of TI
+  - Data items can be unlocked any times
+  - Data items once unlocked cannot be locked again
+Example:
+  ![alt text](image-8.png)
+
+### Properties achieved
+- View-serialization and conflict-serialization due to directional flow 
+- no-dead lock
+- no ensurity of recioverability and cascadeless (dirty read)
+- Early unlocking is possible shorter waiting time and less concurrency
+- A transaction may need to lock data items that it will not access so led to decrease concurrency and increase the waiting time
+- A transaction must know what data items are to be accessed
+- Recoverability and cascade lessness can be provided by not unlocking before commit
+
+### Deadlock handling
+- Here, waiting time is infinite
+- System must have proper methods to deal with it else:
+  - In real time system it may lead to life and money
+  - will reduce resourceswill reduce resources utilisation and increase efficiency
+- 2 principles used to deal with it: 
+  - Prevention: system will never enter in the deadlock state
+  - Detection and recovery: allows system to enter into deadlock and try to recover it
+
+### Prevention 
+- lock all necessary data before execution start: no hold and wait
+- no cycle wait: Improve ordering of data items and locks should follow same approach or ordering
+- No-preemption: Wait and die
+  - if Ti < Tj  and i wants Q then Ti should wait
+  - if Tj > Ti then Ti = rollback  
+- Preemption: wound-wait
+  - if Ti < Tj  and i wants Q, j rollback
+  - if Tj > Ti then Ti should wait

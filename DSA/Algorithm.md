@@ -1,6 +1,5 @@
 # Algorithm
-
-- Algrithm: A set of finite rules or instructions to be followed in calculations or other problem-solving operations
+It is a set of finite rules or instructions to be followed in calculations or other problem-solving operations
 ## Characteristics of Algorithm
 1. **Input**:
 - Data or information provided to the algorithm that it operates on to produce the desired output
@@ -77,7 +76,7 @@
 - Describe an asymptotic lower bond.
 - Let `f(n)` describes the running time of an algorithm; `f(n)` is `Ω(g(n))` if and only if there exist positive constants `c` and `n°` such that:
 ```html
-0 ≤ c g(n) ≤ f(n)        for all n ≥ n°.  
+0 ≤ c g(n) ≤ f(n)        for all n ≥ n° 
 ```
 - If a function is `Ω(n^2)` it is automatically `Ω(n)` as well since it satisfies the above equation.
 
@@ -163,8 +162,8 @@
 - In a non-connected, non-directed graph with two components, each component can be represented as a set. If the intersection of these two sets is an empty set, they are said to be disjoint.
 ![Dis-Joint Sets](https://imgur.com/qbvmDa4.png)
 - We perform two operations here:
-  - `FIND`: for finding a given element in a set
-  - `UNION`:  For finding the union operations. Perform only when two elements are in two different sets, after performing the union we need to simplify the set by combining the two sets. See, below examples for more clarity:
+  - `FIND`: For finding a given element in a set
+  - `UNION`:  For performing the union operations. Perform only when two elements are in two different sets, after performing the union we need to simplify the set by combining the two sets. See, below examples for more clarity:
 - **Applications**: 
   - To represent network connectivity
   - To find least common ancestor
@@ -176,6 +175,29 @@
 - `Union(x, y)`: Merges the sets containing elements x and y into a single set.
 - `Find(x)`: Returns the representative (also known as the "root" or "leader") of the set containing element x
   ![Dis-joint Sets](https://imgur.com/Sr40Mdr.png)
+
+  1. *General find and Union Approach*
+    * Start with each node as its own set
+    * `Find(x)` returns the parent of the set containing `x` 
+    * `Union(x,y)` merges two sets if they are different
+    * When try to add an edge connecting two nodes already belonging to the same set, you detect a cycle
+  2. *Graph Method*
+     * Union is performed by attaching one tree to another’s root.
+     * Graphical representation clearly shows sets shrinking as you connect components and reveals when two vertices are already in the same set (cycle detection).  
+  3. *Array Representation*
+    * Use a `parent[]` array:
+      * `parent[i] < 0` indicates that `i` is a root, and the value (e.g. `-2`) can also store the size/rank of the set.
+      * Otherwise, `parent[i]` points to its parent node
+    * **Weighted Union & Path Compression** (Optimization):
+      * Weighted union ensures we always attach the smaller tree under the larger one — this keeps the tree short.
+      * Path compression updates all nodes visited during `find()` to point directly to the root — making future `find()` calls extremely fast.
+
+## Divide & Conquer
+- A problem-solving strategy that:
+  - Divides the main problem into smaller, same-type subproblems
+  - Conquers (solves) each subproblem recursively
+  - Combines the subproblem solutions into a final solution
+- Every subproblem is of the same kind as the big one.
 
 ## Recurrence Relation
 - *A recurrence relation is an equation or inequality that describes a function in terms of its value on smaller inputs*
@@ -278,7 +300,7 @@ Algorithm RBinSearch (l, h, key)
        / \   / \
       4  5   6  7
   ```
-  ![Binary Tree](https://imgur.com/fLHtGGi.png)
+  ![Binary Tree](image-1.png)
 
 ### Need and Usage of Binary Trees
   - **Efficient Searching and Sorting**: Enables efficient searching (lookup in a dictionary) and sorting due to their inherent ordering.
@@ -291,16 +313,29 @@ Algorithm RBinSearch (l, h, key)
   - All leaf nodes are at the same level.
   - Useful for theoretical considerations or when compactness is a priority
   - Every full binary tree is a complete binary tree
+  - A binary tree with maximum number of nodes
+    - Maximum nodes: `2^(h+1) - 1`
+  ```md
+      A
+     / \
+    B   C
+   / \ / \
+  D  E F  G
+  ```
   
-     ![Full Binary Tree](https://imgur.com/eqFelkz.png)
 2. **Complete Binary Tree**:
   - A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
   - If we construct a complete binary tree from an array without any gaps or missing elements, it's still called a complete binary tree.
-  - A complete binary tree is a full binary tree upto a height `h-1`
+  - A full binary tree upto a height `h-1`
   - Efficient heap implementations and certain types of balanced binary search trees where level-order traversal is important.
   - Height of the complete binary tree is minimum only i.e. `log n`
-    
-     ![Complete Binary Tree](https://imgur.com/3cYlwSK.png)
+  ```md
+      A
+     / \
+    B   C
+   / \ /
+  D  E F
+  ```
 
 ## Heap
 - A heap is a specialized tree-based data structure designed for efficient retrieval of the minimum or maximum element.
@@ -373,7 +408,7 @@ Algorithm RBinSearch (l, h, key)
      - Continue extracting the maximum element & place it at the end of the sorted portion & size reduced by 1
   5. **Get Sorted Array**: The entire array becomes sorted. The largest element is at the end, the second largest is second to last, and so on.
 
-### Heapify
+## Heapify
 - Process of creating heap from an array
 - **Main idea** is to start from the last non-leaf node (i.e., the parent of the last element) and repeatedly heapify each subtree to build the heap from the bottom up.
 - Time Complexity: `O(log n)`
@@ -486,6 +521,9 @@ Algorithm RBinSearch (l, h, key)
 - For single source path problem / minimization problem / optimization problem(Greedy Method).
 - Works for non-negative edge weights (travel times cannot be negative).
 - It guarantees finding the shortest path for all reachable nodes in the graph.
+- In complete graphs it's time complexity is: `n^2`(n is  vertices and n vertices are relaxed)
+- We can convert the non-directed graphs into directed by adding parallel edges. Suppose from 3 to 4 there is a vertex weighted 5, we can change it to directed via replacing the parallel edge from both sides 
+- It may work or may not work for negative egdes.
   ![Dijkstra Algorithm](https://imgur.com/VIwft1W.png)
 
 ## Dyanmic Programming
@@ -521,7 +559,7 @@ Algorithm RBinSearch (l, h, key)
 
 ![Floyd-Warshall](https://imgur.com/35QE4S7.png)
 
-### `Matrix Chain multiplication`(Dynamic Programming):
+## Matrix Chain multiplication (DP):
 
 - Matrix chain multiplication is when you have chain of matrices to multiply
 - The order in which you multiply the matrices, affect the amount of multiplications one need to perform.
@@ -531,7 +569,7 @@ Algorithm RBinSearch (l, h, key)
 
 ![Matrix-Chain  Multiplication](https://imgur.com/db0xeXo.png)
 
-### `Bellman Ford Algorithm` (Single Source Shortest Path/ Dynamic Programing):
+## Bellman Ford Algorithm (Single Source Shortest Path/ DP):
 - A **DP** algorithm used for finding the shortest path in a weighted-graph even for the one having the negative edges.
 - It does this by relaxing the edges repeatedly. Basically, it iterates/relax the edges and updates the shortest distance if a short one is found
 - Process continues till `n-1`, where **n** is the no. of vertices
@@ -550,26 +588,26 @@ Here is an example:
 Here, is an example:
   ![Bellman Ford Algorithm-II](https://imgur.com/irr8Gsc.png)
 
-### `0/1 Knapsack Method:`
+## 0/1 Knapsack Method
 - `Objective`: Fill objects in such a way that the total profit gets maximised
 ![0/1 Knapsack](https://imgur.com/HpLqpi4.png)
 ![0/1 Knapsack](https://imgur.com/eWocc2A.png)
 
-### `Optimal Binary Search Tree(Successful & Unsuccessful Probability)`
+## Optimal Binary Search Tree (Successful & Unsuccessful Probability)
 
-- `Binary Search Tree`: A data structure that consists of nodes, where these nodes contain a **key** and two **link** (Right & Left child)
-- `Cost of Searching`:  No. of comparision required to find a key, depends on the level of search
+- _Binary Search Tree_: A data structure that consists of nodes, where these nodes contain a **key** and two **link** (Right & Left child)
+- _Cost of Searching_:  No. of comparision required to find a key, depends on the level of search
 - The cost is defined as the sum of the probabilities of all the nodes in the tree multiplied by their depth
   - Maximum comparision = height/level of binary search tree
   - If the height of binary search tree is less, then comparision  will also be less
 - Searches are of two types:
-  - `Successful`: Search is called successful, if the key element is found
-  - `Un-successful`: Search is called un-successful, if the key element is not found
+  - _Successful_: Search is called successful, if the key element is found
+  - _Un-successful_: Search is called un-successful, if the key element is not found
   
 ![OBST](https://imgur.com/TcFSkkt.png)
 ![OBST](https://imgur.com/HqsWlpE.png)
 ![OBST](https://imgur.com/ojxh0re.png)
-- `Optimal Binary Search Tree`: It is a binary search tree such that the cost of searching should be minimum
+- _Optimal Binary Search Tree_: It is a binary search tree such that the cost of searching should be minimum
   - Cost also depends on the height of binary search tree
 - We use **DP** for finding the optimal-binary search tree. This include creating the table to store the minimum cost for each possible subtrre. Afterthat, table is built iteratively, starting with the smallest subtrees and upto root. At the end, we use **backtracking** through the table to find the optimal arrangement of nodes in the tree
 - Root should be the one that minimizes the total cost of searching in the tree 
@@ -577,22 +615,22 @@ Here, is an example:
 
 ![OBST](https://imgur.com/shSHqDi.png)
 
-### `Travelling Sales Problem`:
+## Travelling Sales Problem
 - **Problem**: We have to start from one vertex and travel all other vertices once and to return back to the same starting vertex and the cost of tracking shoukd be minimum
 - Order of execution is different/ but the recursion tree in the figure look:
 ![Travelling Sales Problem](/Images/image-6.png) 
 
-### `Reliability Design-DP`:
+## Reliability Design-DP
 - It signifies the optimal number of device copies having max reliability with minimum cost
 - Probability of system = **π** (Product of all reliabilities)
 - Probability of a product in good working condition = `r`
 - Probability of a product not in good working comditin = `(1-r)`
   - Probability of same n products = `(1-r)^n`
 - Uppetr bond is the maximum number of copies of a device that can be used for optimal solution
-- `Problem`: We have to set-up a system such that if we have total cost ac 'C', by buying devices such that, how many copies of these devices should i buy if within that cost such that the total reliability of the system is maximised
+- _Problem_: We have to set-up a system such that if we have total cost ac 'C', by buying devices such that, how many copies of these devices should i buy if within that cost such that the total reliability of the system is maximised
 
 
-### `Longest Common Sequence`(LCS):
+## Longest Common Sequence (LCS):
 - A classic CS problem that involves finding the longest sequence common to two sequences.
 - Its sequence is formed by deleting some elements (not common) without changing the order of the remaining
 
@@ -606,16 +644,16 @@ Here, is an example:
 
 ![alt text](https://imgur.com/XQskRfk.png)
 
-### `Graph Traversal`:
-- We use **Graph traversal** to visit and explore all nodes in a graph
+## Graph Traversal
+- It is used to visit and explore all nodes in a graph
 ![Graph Traversal](https://imgur.com/j2CHCvb.png)
-- `Breadth First Search`(**BFS**):
+- **Breadth First Search** (*BFS*):
   - Explore all the nodes at the current depth level before moving on to nodes at the next depth level
   - It uses **Queue** data structure to keep track of nodes to visit next
   - It guaranteed to find the shortest path between nodes in an unweighted graph
   - It has a time complexity of `O(V + E)`
 ![BFS](https://imgur.com/RhMNvjx.png)
-- `Depth First Search`(**DFS**):
+- **Depth First Search** (*DFS*):
   - Explore as far as possible along the current branch before backtracking
   - It uses **Stack** data structure(either explicitly & implicitly) to keep track of nodes to visit next
   - It may not always find the shortest path between nodes in an unweighted graph
@@ -623,7 +661,7 @@ Here, is an example:
   ![DFS](https://imgur.com/XPRxWDH.png)
   ![BFS vs DFS](https://imgur.com/5d1F8EQ.png)
 
-### `Articulation Point`:
+## Articulation Point
 - These are the points/vertex in the graph whose removal will disconnect the graphs into multiple components
 - We use **DFS** 
 ![Articulation Point](https://imgur.com/eCcQ6zd.png)
@@ -631,7 +669,7 @@ Here, is an example:
   - L[v] >= d[u],   u will bw an articulation point ---> this isnot for the root
   - If root is having more than one child then it is said that root is an articulationn point
 
-### `Backtracking`(Brute Force Approach):
+## Backtracking (Brute Force Approach):
 - It is a general algorithm for finding all (or some) solutions, particularly constraint satisfaction problems.
 - Same as DP but the difference is that it is nor optimization problem and do not use binding function
 - Followss DFS
