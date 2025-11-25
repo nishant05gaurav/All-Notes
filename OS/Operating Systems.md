@@ -644,7 +644,7 @@ The CPU scheduling algorithm does not affect the amount of time during which a p
 In an interactive system, turnaround time may not be the best criterion. Often, a process can produce some output fairly early and can continue computing new results while previous resultts are being output t the user. Thus, another measure is the time from the submission of a request until the first response is produces. This measure, called response time, is the it takes to start  responding, not the time it takes to output the response. The turnaround time is generally limited by the speed of the output device.
 
 ### **Scheduling Algorithms**:
-
+ 
 #### (First-Come,First-Served Scheduling)
 - By far the simplest CPU-schedulnig algorithm.
 - The process that requests the CPU first is allocated the CPU first.
