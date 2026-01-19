@@ -7,4 +7,3 @@
 - [Data Structures and Algorithm](./DSA/)
 - [Operating System](./OS/)
 - [Web Development](./Web%20Dev/)
- 
