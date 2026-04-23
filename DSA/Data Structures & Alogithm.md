@@ -437,10 +437,55 @@ int maxSubArray(vector<int> &nums)
 - 
 
 
+### Tree
+![Tree](image-2.png)
+- A tree is a finite set of one or more data items (`nodes`), such that: here is a special node called the *root node* of the tree and the remaining nodes are partitioned into `n>=0` disjoint subsets, each of which is itself a tree, and they are known as *subtrees*.
+- *Degree of the tree*: Highest degree in the node of the tree 
+- *Leaf Node*(Terminal Node) has degree 0
+- Root Node has Level 0 and this goes on increasing as we move down
+- Generation is same as Level of node
+- Max of Level is always equal to the *Degree of the tree*
+- Height or Depth of Tree: Number of nodes in the largest branch (or) Highest possible level number plus one
+- Siblings: Nodes which have common parent
+- `Operations`:
+  - Traversal 
+  - Searching
+  - Insertion and Deletion
+  - Height and Depth Calculation
+  - Balancing
+- `Application`:
+  - *Hierarchical Data Representation*:
+    -  Used to represent hierarchical structures like file systems, HTML/XML DOM, DNS, organization charts, syntax trees, JVM, UI design.
+  - *Efficient Searching & Sorting*:
+    -  Trees like BST, Heap, Trie, Suffix Tree, K-D Tree provide fast search, sort, prefix lookup, and pattern matching (logarithmic time).
+  - *Dynamic Data with Fast Operations*: 
+    - Trees support efficient insertion and deletion, making them suitable for real-time systems and frequently changing data.
+  - *Core Use in Systems & AI*: 
+    - Used in databases (B/B+ Trees indexing), compilers, machine learning, decision making, networks (routing & spanning trees), graphics, games.
+- **`Types`**:
+  - *Binary Tree*: It is a hierarchical data structure where each node has at most two children called left and right. The top node is the root, and nodes with no children are called leaves.
+  - *Binary Search Tree*: It stores data in a sorted manner where left child values are smaller and right child values are greater than the parent. This structure enables efficient searching, insertion, and deletion operations.
+  - *AVL Tree*: It is a self-balancing Binary Search Tree where the height difference between left and right subtrees is at most one. It maintains balance using rotations to ensure fast search, insertion, and deletion.
+  - *Red-Black Tree*: It is a self-balancing Binary Search Tree that uses node coloring rules to maintain balance. It guarantees logarithmic time complexity for search, insertion, and deletion operations.
+  - *B-Tree*: It is a multi-way balanced tree designed for efficient disk storage and large datasets. It reduces tree height by storing multiple keys per node, improving search and update performance.
+  - *B+ Tree*: It is a variant of B-Tree where all data is stored only in leaf nodes and internal nodes act as guides. Leaf nodes are linked, allowing fast sequential and range access.
+  
+### Binary Tree:
+![BINARY TREE](image-4.png)
+- A binary tree is defined as a finite set of elements, called nodes, such that
+  - T is empty (called the Null Tree or empty tree), or
+  - T contains a distinguished node R, called the root of T, and the remaining nodes of T form an ordered pair of disjoint binary trees T1 and T2
+> Number of nodes per 
+- **Complete Binary Tree**: A type of binary tree whose all levels are completely filled
+- **Almost Complete Binary Tree**: All levels are completly filled, except possibily the last level and nodes in the last evel are all left alligned
+- **Strict Binary Tree**: Each node of a strict Binary Tree will have wither 0 or 2 children
+- Representation: There are two posssible representations of binary tree:
+  - Array Representation (used in heaps)
+  - Linked Representaion (default)
 
-
-
-
-
-### Linked list
-- 
+### Binary Search Tree (BST):
+- A binary search tree is the most important data structure, taht enables one to search for and find an elemet with an average running time
+- f(n) = `O(log n)`
+- Duplicate values are not allowed in BST (by default)
+- In `worst case` scenario its time complexity becomes `O(n)`
+![BST](image-5.png)

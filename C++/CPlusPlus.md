@@ -43,7 +43,7 @@
 - Class members are by default private 
 
   ![alt text](https://imgur.com/PsQj5LJ.png) 
-=======
+
 ### Properties of OOPs
 1. **Encapsulation**: Wraping up of data and fxn into a single unit
 2. **Data Hiding**: The principle of restricting access to the internal state and implementation details of a class, typically achieved by using access specifiers like *private* and *protected*

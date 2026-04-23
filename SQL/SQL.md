@@ -48,3 +48,13 @@ DROP COLUMN <column_name>;
 
 ```
 - Used to list all the tables (if present)
+
+
+
+---
+
+- SQL (Structured Query Language) is a standard language for accessing and manipulating databases
+- SQL can execute queries, retrieve data, insert data, update data, delete data, create new databases, create new table.
+- RDBMS (Relational Database Management System) is the software that actually stores, manages, and secures data. It organises information into related tables (rows and columns) and handles all the complex background work.
+- Every table is broken into smaller entities called fields (a column in a table that maintains specific informations)
+- 

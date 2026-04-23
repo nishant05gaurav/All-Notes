@@ -622,14 +622,14 @@ type(d)     # class <bool>
 ### OOP's:
 
 - It stands for **Object Oriented Programming** where we solve a problem by creating the objects and it focuses on using reusable code (DRY Principle)
-- **Class**: It is a blue print f creating an object
+- **Class**: It is a blue print of creating an object
   ```py
    class Employee:   # It's always suggested to keep the first letter capital
       # Methods and Variables
   ```
 - **Objects**: 
   - An object is an instance of the class
-  - Memory is allocated after the objecy instantiation
+  - Memory is allocated after the object instantiation
   ```py
    e1 = Employee   
   ```
