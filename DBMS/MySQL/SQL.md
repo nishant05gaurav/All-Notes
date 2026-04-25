@@ -18,11 +18,11 @@
 - SQL is not a case sensitive language  
   - eg: `select` is the same as `SELECT`
 
-![alt text](https://imgur.com/lpU6mog.png)
+![SQL](https://imgur.com/lpU6mog.png)
 
 ### `SQL Data Types`:
 - In SQL, data types define the kind of data that can be stored in a column or variable
-![alt text](https://imgur.com/GPsDSXH.png)
+![SQL Data Types](https://imgur.com/GPsDSXH.png)
 - `CHAR` is for fixed length and `VARCHAR` is for variable length strings. Generally, `VARCHAR` is better as it only occupies necessary memory and works more efficiently
 
 ### `Types of SQL commands`:

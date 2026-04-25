@@ -2,7 +2,7 @@
 - An operating system (OS) is a program that manages the computer hardware 
   - eg: Windows, Linux, Ubuntu, MacOSX, iOS, Android
 - It also provides a basis for Application Programs and acts as an intermediate blw users and computer hardware
-  ![alt text](https://imgur.com/4M3eI6y.png)
+  ![OS](https://imgur.com/4M3eI6y.png)
 
 ## Types of Operating System
 ### Batch OS
@@ -48,7 +48,7 @@
     - Limited utility
     - eg: multimedia, virtual reality, etc
 
-![alt text](https://imgur.com/6whgQUT.png)
+![Types-OS](https://imgur.com/6whgQUT.png)
 ### Distributed OS v/s Network OS
   - Both facilitates resource sharing and communication in network environments but the difference lie in their scope, transparency, and focus
   - Distributed OS extend their functionality across multiple machines to provide a unified computing environment
@@ -69,13 +69,13 @@
 
 ## Basics of OS
 - A moder general-purpose computer system consists of one or more CPUs and a number of devices controller connected through a common bus that provide access to shared memory
-  ![alt text](https://imgur.com/eH2A8l8.png)
+  ![BUS](https://imgur.com/eH2A8l8.png)
 - Each device controller is in charge of a specific type of device
 - CPU and device controllers execute concurrently, completing for memory cycle
 - To ensure orderly access to the shared memory, a memory controller is provide whose function is to synchronize access to the memory
 
 ## Boot-Strap Program 
-![alt text](https://imgur.com/iLGT1TT.png)
+![Boot-Strap](https://imgur.com/iLGT1TT.png)
 - As the computer system powered up, a test called `POST` (Power On Self Test) 
 - POST basically test's is everything is working and connecting to the computer, in a specific amount of time
 - In that time, consequently a piece of code initially runs that is store in ROM/ EEPROM, called `BIOS` (Basic Input Output System)
@@ -95,7 +95,7 @@
 - On completion, CPU remains the interrupted computation
 
 ## I/O Structure
-![alt text](https://imgur.com/UEQw6rR.png)
+![I/O Structure](https://imgur.com/UEQw6rR.png)
 - Storage is only of many types of I/O devices within a computer
 - A large portion of OS Code is dedicated to managing I/O, both b/c of its importance to the relliability and performance of a system and b/c of the varying nature of the device
 - Computer System = CPU + Device Driver
@@ -104,7 +104,7 @@
     - Set of special purpose resistance
 
 ## Working of an I/O Structure
-![alt text](https://imgur.com/TSgkMh0.png)
+![Working of I/O](https://imgur.com/TSgkMh0.png)
 - To start an I/O operation, the device driver loads the appropriate registers within the device controller
 - Device controller examines the content of registers and starts the transfer of data from the device to its local buffer
 - Once the data gets transfered fully, controller informs the device driver via an interrupt. After that device driver returns control to OS
@@ -128,7 +128,7 @@
   - **Types**
     - Symmetric Multi-processing
     - Asymmetric Multi-processing
-        ![alt text](https://imgur.com/znpdT4Q.png)
+        ![MultiProcessing](https://imgur.com/znpdT4Q.png)
 - **Clustered System**
   - Gather multiple CPUs to accomplish computational work (as multi-processor system)
   - They are composed of two or more individual systems coupled together 
@@ -144,10 +144,10 @@
 ## Operating System Services
 - Operating systems provide a set of services to both the users and the applications running on a computer system. These services are essential for managing hardware resources, facilitating communication between software and hardware components, and ensuring a secure and efficient computing environment.
 -  Here are some common operating system services:
-  ![alt text](https://imgur.com/Mgy0TuP.png)
+  ![OS Services](https://imgur.com/Mgy0TuP.png)
 
 ## GUI v/s CLI
-![alt text](https://imgur.com/wd0h5e3.png)
+![GUI v/s CLI](https://imgur.com/wd0h5e3.png)
 
 ## **System Call** 
 - System calls provide an interface to the services made available by an OS
@@ -156,7 +156,7 @@
 - If you're programming is executing in Kernel Mode, somehow if the program gets crashed then the whole program gets crashed
   - User Mode: Safer
   - Kernel Mode: Privilaged
-![alt text](https://imgur.com/mghbN4N.png)
+![System Call](https://imgur.com/mghbN4N.png)
 - Acquire input Name:
   - ask to enter the name
   - select the input file/ pointing device
@@ -166,7 +166,7 @@
 - If the name of the output/destination file that you provided, if it a new file and you are not allowed to create a file that already exist. So, if you find that the file already exist, then you have to abort 
   - Use of **System Call**
 - **Types of System Call**:
-![alt text](https://imgur.com/sJQyYVy.png)
+![System Call](https://imgur.com/sJQyYVy.png)
 
 ## System Programs
 - System Programs provide a convenient environment for program development and execution
@@ -219,7 +219,7 @@
 - Mechanism determine how to do something
 - Policies determine what will be done 
 - One important principle is the separation of policy from mechanism
-  ![alt text](https://imgur.com/MIJI5hZ.png)
+  ![Mechanism & Policies](https://imgur.com/MIJI5hZ.png)
 
 ## Advantage of Writing in High-Level Language
 - code can be written faster
@@ -228,10 +228,10 @@
 - easier to port
 
 ## Structure of OS
-![alt text](https://imgur.com/PKPpjKz.png)
+![Structure of OS](https://imgur.com/PKPpjKz.png)
 ## Virtual Machines
 - The fundamental idea behind a virtual machine is to abstract the hardware of a single computer (CPU, Memory, Disk-Drivers, Network Interface Cards, and so forth) into several different execution environments, thereby creating the illusion that each separate execution environment is running its own private computer
-  ![alt text](https://imgur.com/sTOQQf8.png)
+  ![Virtual Machines](https://imgur.com/sTOQQf8.png)
 - **Implementation**:
   - Virtual Machine Software - Runs in Kernel Mode
   - Virtual Machine itself - Runs in User Mode
@@ -264,8 +264,8 @@
   - If there are more processes, the rest will have to wait until the CPU is free and can be rescheduled.
 
 ## Scheduling Queues
-![alt text](https://imgur.com/SL2GOrf.png)
-![alt text](https://imgur.com/Y4BTSC1.png)
+![Scheduling Queues](https://imgur.com/SL2GOrf.png)
+![Scheduling Queues](https://imgur.com/Y4BTSC1.png)
 
 
 ## Context Switching
@@ -274,7 +274,7 @@
 - When an interrupt occurs, the system needs to save the current **context** of the process currently running on the CPU so that it can restore that context when its processing is done, essentially suspending the process and then resuming it.
 - The context is represented in the ``PCB(Process Control Block)``.
 - Switching the CPU to another process requires performing a state save of the current process and a state restore of a different process.
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/b3221ad4-c42a-43c7-86a1-47ed243ec36b)
+![Context Switching](https://github.com/nishant05gaurav/Notes/assets/140972654/b3221ad4-c42a-43c7-86a1-47ed243ec36b)
 - Context-switch time is pure overhead because the system does no useful work while switching.
 - Its speed varies from machine to machine, depending on the memory speed, the number of registers that must be copied, and the existence of special instructions (such as a single instruction to load or store all registers).
 - Typical speeds are a few milliseconds.
@@ -284,7 +284,7 @@
 #### `Process Creation`
 - A process may create several new processes, via a create-process system call, during the course of execution.
 - The newly created process is called a parent process, and the new process is called the child process.
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/1d630025-93b9-437d-8648-2ec81f1cf285)
+![Process Creation](https://github.com/nishant05gaurav/Notes/assets/140972654/1d630025-93b9-437d-8648-2ec81f1cf285)
 
 When a process creates a new process, two possibilities exist in terms of execution:
 - The parent continues to execute concurrently with its children.
@@ -332,7 +332,7 @@ There are two fundamental models of interprocess communication:
 - `Message Passing:`
   - In the message-passing model, communication takes place by means of messages exchanged between the cooperating processes.
   
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/8d1a0be0-c175-46b4-bcee-2881c0e20805)
+![IPC](https://github.com/nishant05gaurav/Notes/assets/140972654/8d1a0be0-c175-46b4-bcee-2881c0e20805)
 
 
 ### `Shared Memory Systems`:
@@ -353,7 +353,7 @@ For example, a compiler may produce assembly code, which is consumed by an assem
 - A producer can produce one item while the consumer is consuming another item.
 - The producer and consumer must be synchronized so that the consumer does not try to consume an item that has not yet been produced.
 
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/013a3f18-821d-4d5d-9eca-909adb15a284)
+![Producer-Consumer Problem](https://github.com/nishant05gaurav/Notes/assets/140972654/013a3f18-821d-4d5d-9eca-909adb15a284)
 
 
 ### `Message-Passing Systems`
@@ -419,7 +419,7 @@ The messages are sent to and received from mailboxes, or ports.
     - A link may be associated with more than two processes.
     - Between each pair of communicating processes, there may be a number of  different links, with each link corresponding to one mailbox.
   
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/2a86f56f-3ee6-430c-aee8-99c625311acc)
+![Communication](https://github.com/nishant05gaurav/Notes/assets/140972654/2a86f56f-3ee6-430c-aee8-99c625311acc)
 
 Process `P1` sends a message to `A`, while both `P2` and `P3` execute a `receive()` from `A`.
 
@@ -464,7 +464,7 @@ Used for communication in  Clinet-Server Systems.
 - Servers implementing specific services (such as talent, `FTP`, and `HTTP`) listen to well-known ports(a talent server listens to port 23, an FTP server listens to port 21, and a web, or `HTTP`, server listens to port 80).
 - All ports below `1024` are considered well-known; we can use them to implement standard services.
 
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/5d3ea30b-4a2c-43b6-ade1-93549478813a)
+![Sockets](https://github.com/nishant05gaurav/Notes/assets/140972654/5d3ea30b-4a2c-43b6-ade1-93549478813a)
 
 
 ### `Remote Procedure Calls (RPC)`
@@ -484,7 +484,7 @@ Remote Procedure Call (RPC) is a protocol that one program can use to request a 
 - A similar stub on the server side receives this message and invokes the procedure on the server.
 - If necessary, return values are passed back to the client using the same technique.
 
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/65e2fc88-d460-4d0f-ae1f-d992dd023721)
+![RPC](https://github.com/nishant05gaurav/Notes/assets/140972654/65e2fc88-d460-4d0f-ae1f-d992dd023721)
 
 ### `Execution of a remote procedure call (RPC):`
 
@@ -505,7 +505,7 @@ Remote Procedure Call (RPC) is a protocol that one program can use to request a 
 - A traditional/heavyweight process has a `single thread` of control.
 - If a process has `multiple threads` of control, it can perform `more than one task at a time`.
      
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/9c9358e3-6c2f-43d7-a3d0-d1718af45d44)
+![Thread](https://github.com/nishant05gaurav/Notes/assets/140972654/9c9358e3-6c2f-43d7-a3d0-d1718af45d44)
 
 
 ### `Benefits`
@@ -534,8 +534,8 @@ There are three common ways of establishing this relationship:
 - One-to-One Model
 - Many-to-Many Model
 
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/c1ae0bd2-7231-4ab8-8df9-b81a6a9b7e0d)
-![image](https://github.com/nishant05gaurav/Notes/assets/140972654/fd3d0e62-8e92-466e-8854-714dfcb072c8)
+![Threads](https://github.com/nishant05gaurav/Notes/assets/140972654/c1ae0bd2-7231-4ab8-8df9-b81a6a9b7e0d)
+![Threads](https://github.com/nishant05gaurav/Notes/assets/140972654/fd3d0e62-8e92-466e-8854-714dfcb072c8)
 
 
 #### `Hyperthreading  OR   Simultaneous Multithreading (SMT)`
@@ -601,11 +601,11 @@ If a thread invokes the exec() system call, the program specified in the paramet
 - With multiprogramming, we try to use this system takes the CPU away from that process and gives the CPu to another and this pattern continues.
 
 ### **CPU and I/O Burst Cycles**:
- ![Alt text](https://imgur.com/rqBuFtg.png)
+ ![CPU and I/O Burst Cycles](https://imgur.com/rqBuFtg.png)
 
  Evetually, the final CPU burst ends with a system request to terminate execution.
 
- ![Alt text](https://imgur.com/VwRzBvd.png)
+ ![CPU and I/O Burst Cycles](https://imgur.com/VwRzBvd.png)
 
  ### **Preemptive and Non-Preemptive Scheduling**:
 
@@ -626,7 +626,7 @@ If a thread invokes the exec() system call, the program specified in the paramet
 
 ### **Scheduling Criteria**
 
-![Alt text](https://imgur.com/uWxKjvE.png)
+![Scheduling Criteria](https://imgur.com/uWxKjvE.png)
 
 #### ***``CPU Utilization``***:
 We want to keep the CPU as busy as possible. Concepttuslly, CPU utilization can range from 0 to 100 percent. In a real system, it should range from 40 percent (for a lightly loaded system) to 90 percent (for a heavily used system).
@@ -649,7 +649,7 @@ In an interactive system, turnaround time may not be the best criterion. Often, 
 - By far the simplest CPU-schedulnig algorithm.
 - The process that requests the CPU first is allocated the CPU first.
 - The implementation of the FCFS policy is easily managed with a ``FIFO queue``.
-  ![Alt text](https://imgur.com/4296fsm.png)
+  ![Scheduling Algorithms](https://imgur.com/4296fsm.png)
 - Whwn a process enters the ready queue, its PCB is linked onyo the tail of the queue.
 - When the CPU is free, it is allocated t o the process at the head of the queue.
 - The running process is then removed from the queue.
@@ -661,11 +661,11 @@ In an interactive system, turnaround time may not be the best criterion. Often, 
 
 ### Convey Effect:
 If processes with higher burst time arrived before the process es with smaller burst time, then, smaller processes have to wait for a long time for a long time for longer processes to release the CPu.
-![Alt text](https://imgur.com/nvhFnJv.png)
-![Alt text](https://imgur.com/dspklpP.png)
-![Alt text](https://imgur.com/uK4NaTG.png)
-![Alt text](https://imgur.com/g1vWTDp.png)
-![Alt text](https://imgur.com/5FYjJeO.png)
+![Convey Effect](https://imgur.com/nvhFnJv.png)
+![Convey Effect](https://imgur.com/dspklpP.png)
+![Convey Effect](https://imgur.com/uK4NaTG.png)
+![Convey Effect](https://imgur.com/g1vWTDp.png)
+![Convey Effect](https://imgur.com/5FYjJeO.png)
 
 ### ``Shortest-Job-First-Scheduling``:
 - This algorithm associates witch each process the length of the processes next CPU burst.
@@ -677,9 +677,9 @@ If processes with higher burst time arrived before the process es with smaller b
 
 - A more appropriate  term for the   scheduling method would be  the `Shortest-Next-CPU-Burst Algorithm` because scheduling depends on the length of the next CPU burst of a process, rather than its total length.
 
-![Alt text](https://imgur.com/sGQ4lzn.png)
+![Algo](https://imgur.com/sGQ4lzn.png)
 
-![Alt text](https://imgur.com/CPKaRwV.png)
+![Algo](https://imgur.com/CPKaRwV.png)
 
 ### Problems With SJF Scheduling:
 - The real difficulty with the SJF algorithm is knowing the length of the next CPU request.
@@ -692,10 +692,10 @@ If processes with higher burst time arrived before the process es with smaller b
 - We expect that the next CPU burst will be similar in length to the previous one.
 - Thus, by computing an approximation of the length of the next CPU burst, we can pick the process with the shortest predicted cpu burst.
 
-![Alt text](https://imgur.com/S71bmYS.png)
-![Alt text](https://imgur.com/CaTmf8V.png)
-![Alt text](https://imgur.com/3cLKeoL.png)
-![Alt text](https://imgur.com/xmzBBfT.png)
+![SJF](https://imgur.com/S71bmYS.png)
+![SJF](https://imgur.com/CaTmf8V.png)
+![SJF](https://imgur.com/3cLKeoL.png)
+![SJF](https://imgur.com/xmzBBfT.png)
 
 ### `Priority Scheduling`:
 - A priority is associated with each process, and the CPU is allocated to the process with the highest priority.
@@ -707,7 +707,7 @@ If processes with higher burst time arrived before the process es with smaller b
 - A ``preemptive`` priority scheduling algorithm will preempy the CPU if the priority of the newly arrived process is higher than the priority of the currently running process.
 - A ``nonpreemptive priority`` scheduling algorithm will simply put the new process at the head of the ready queue.
 
-![Alt text](https://imgur.com/lRmn6NU.png)
+![Priority Scheduling](https://imgur.com/lRmn6NU.png)
 
 ### `Problem with Priority Scheduling` :
 - A moajor problem with priority scheduling algorithm is indefinite blocking, oe starvation.

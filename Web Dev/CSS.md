@@ -134,10 +134,10 @@
    2. _block_: Take full space availabile in width
    3. _inline-block_: Similar to inline but we can set margin and padding
    4. _none_: To remove element from document flow
-      ![alt text](https://imgur.com/0HGEZno.png)
+      ![Display Propert](https://imgur.com/0HGEZno.png)
 
 5. **Visibility**:
-   ![alt text](https://imgur.com/qe3mR9B.png)
+   ![Visibility](https://imgur.com/qe3mR9B.png)
 
 - _When_ **visibility** _is set to_ `none` _, space for the element is reserved. But for_ **display** _set to_ `none` _, no space is reserved or blocked for the element_
 

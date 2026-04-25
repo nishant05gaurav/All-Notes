@@ -37,8 +37,8 @@ type(d)     # class <bool>
 - It is a process of converting one data type into another
 - Python provides built-in functions for type conversion
 - It also raise errors if conversion is not possible
-  ![alt text](diagram-export-4-4-2025-11_56_44-PM.png)
-  ![alt text](<Whiteboard 4 (2).png>)
+  ![Typecasting](/Image/Python/Typecasting.png)
+  ![Typecasting](/Image/Python/TypecastingTwo.png)
 
 ### String
 
@@ -52,7 +52,7 @@ type(d)     # class <bool>
 #### String Slicing
 - It is used for getting a part of the strings
 - Strings are immutable, whenever we apply some methods on it, every time it returns a new value
-    ![alt text](diagram-export-4-9-2025-4_53_14-PM.png)
+    ![StringSlicing](/Image/Python/StringSlicing.png)
 
 #### Important String Functions
 1. `len()`: It returns the length of the strings

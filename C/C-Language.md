@@ -7,12 +7,12 @@
 - Oracle, Core Libraries of Android, MySQL, almost every device driver, Major part of WebBrowser (all are written in C)
 - Unix Operating System (developed in C)
 
-![alt text](https://imgur.com/hqNC1XT.png)
-![alt text](https://imgur.com/TpiibDq.png)
+![About C](https://imgur.com/hqNC1XT.png)
+![Software-Developmen-C](https://imgur.com/TpiibDq.png)
 
 ## Constants
 - These are basically data (any information)
-  ![alt text](https://imgur.com/hKe18zl.png)
+  ![Data-Types](https://imgur.com/hKe18zl.png)
 
 ## Varibles
 - Name of memory location where we store data, called **variables**
@@ -31,7 +31,7 @@
   - These are basically the types of data
   - _5 keyboards_ in C Language
   - _Primitive Data Type_:- Collection of keywords and data type
-  ![alt text](https://imgur.com/p1yF6JP.png)
+  ![DataTypes](https://imgur.com/p1yF6JP.png)
 - `unsigned`: used when the value stored will be always +ve
 - `flag`: basically flip flops eg: (class A, class B)
 
@@ -79,7 +79,7 @@
 - `%` : Modulus operator gives reminder
 
 ### **Bitwise Operator**
-  ![alt text](https://imgur.com/lkO5E3L.png)
+  ![Bitwise Operator](https://imgur.com/lkO5E3L.png)
   1. `Right Shift`: **(>>)** shifts towards left
   2. `Left Shift`: **(<<)** shifts towards right
 
@@ -90,16 +90,16 @@
 - Every non-zero values is True (1) and Zero is False (0)
 
 ### **Logical Operator**
-  ![alt text](https://imgur.com/MxM3G6F.png)
+  ![Logical Operator](https://imgur.com/MxM3G6F.png)
 
 ### **Conditional Operator**
-![alt text](https://imgur.com/6RlLavK.png)
+![Conditional Operator](https://imgur.com/6RlLavK.png)
 
 ## **Switch Control Instruction**
 - Use when there are many condition & we have to choose from that
 - `switch` followed by an integer/expression to evaluate an integer
 - `case` followed by an integer/a character constant  
-  ![alt text](https://imgur.com/IqZza81.png)
+  ![Switch Control Instruction](https://imgur.com/IqZza81.png)
 - **`break`**
   - used in loops as well as in switch body
   - used to break the normal execution of a loop
@@ -203,7 +203,7 @@
 - When functions are called repeatedly, they repeatedly consumes memory leaving previous function in paused stage (RAM).
 - It's done whenever the base condition is achieved.
 - Problems that are solved by the help of recursion, can also be solved by the help of loop but viceversa is incorrect. 
-  ![alt text](https://imgur.com/mYG2Chk.png)
+  ![Recursion](https://imgur.com/mYG2Chk.png)
 
 ## Array
 - An array is a fundamental data structure in programming that stores a collection of items of the same data type under a single name
@@ -252,7 +252,7 @@
 ### 2-Dimensional Array
 - No. of variables is "6", This means 1st array will get 3 & 2ns Array will get 3
 - Called array of arrays
-  ![alt text](https://imgur.com/97lv8NU.png)
+  ![2D-Array](https://imgur.com/97lv8NU.png)
 
   ```c
   int A[3][3], B[3][3], C[3][3], i, j;
@@ -321,7 +321,7 @@
 - `gets`: When we want to print multipple strings
 
 ### Some Important String Functions
-![alt text](https://imgur.com/6tvlVwM.png)
+![String-Functions](https://imgur.com/6tvlVwM.png)
 
 ## Pointers
 - A Pointer is a varible that stores memory address of another variable
@@ -330,13 +330,13 @@
   int  num = 42;
   int *ptr = &num; // ptr stores the memory address of num
   ```
-  ![alt text](https://imgur.com/qYFiF2y.png)
+  ![pointerss](https://imgur.com/qYFiF2y.png)
 
 ### Extended Concept of Pointers
  1. **Level of Indirection (\*)**
 -  Level is defined by counting the number of `*` before the names of variable
     -  Example: `**q` --> Level = 2, It contains the address of variable having one less level
-    ![alt text](https://imgur.com/Rza9Uo3.png)
+    ![Level of Indirection](https://imgur.com/Rza9Uo3.png)
 
 2. Pointers Arithmetic
    1. We can add, multiply or divide two addresses (Substraction is Possible)
@@ -420,7 +420,7 @@
    -  `int a[4]` --> int consumes 2 byte memory in 16 bit architecture
     - Hence, &a[0] = 1000; &a[1] = 1002; and so on...
 - Pointers when incremented, laways point to immediately next bloxk of its own type.
-  ![alt text](https://imgur.com/feZpKdN.png)
+  ![Pointers with Array](https://imgur.com/feZpKdN.png)
 
 ### Pointers with string
 - string is stored in char array
@@ -554,8 +554,8 @@ as
 ## Union In C
 - Union is similar to structure, except it allows you to define variable that share storage
 - Defining `unions` means creating new data type
-  ![alt text](https://imgur.com/DpgpuAj.png)
-  ![alt text](https://imgur.com/mdxjyHZ.png)
+  ![Union In C](https://imgur.com/DpgpuAj.png)
+  ![Union In C](https://imgur.com/mdxjyHZ.png)
 - Union members are accessed in the same manner as we access structure member
 - Union is generally used in low-level programming 
 
@@ -601,13 +601,13 @@ as
 
 ## Enumerators
 - It gives us an opportunity to convert own data type and define what value the variable of this data type can take
-  ![alt text](https://imgur.com/IaITI4b.png)
+  ![Enumerators](https://imgur.com/IaITI4b.png)
 - We can write programme without the help of enumerators but, enumerators help in writing clear codes and simplify programming:
-  ![alt text](https://imgur.com/pk8W0Ai.png)
+  ![Enumerators](https://imgur.com/pk8W0Ai.png)
 
 ### `typedef`:
 - Its a keyword which is use to give a new name to the existing data type.
-  ![alt text](https://imgur.com/PqEg1K2.png)
+  ![typedef](https://imgur.com/PqEg1K2.png)
 
 ## Pre-Processor 
 - Programme which performs before the compilation
@@ -615,7 +615,7 @@ as
 - It only notices `#` started statements
 - Each pre-processing directive must be on its own line
 - The word after `#` is called pre-processor command
-  ![alt text](https://imgur.com/QmyzBP9.png)
+  ![Pre-Processor](https://imgur.com/QmyzBP9.png)
 
 ##  `# include`
 - One of the most popular pre-processor command
@@ -683,7 +683,7 @@ as
 > #define HLINC for(i = 0; i < 9; i++)  \  printf("%c", 196);
 
 - `#if`, `#endif`, `#ifdef`, `#ifndef`:
-  ![alt text](https://imgur.com/Ot52ta8.png)
+  ![if:endif:ifdef:ifndef](https://imgur.com/Ot52ta8.png)
 
 - `#pragma directive`:
   -  Used to turn on/off certain features
@@ -710,7 +710,7 @@ as
 ## `File Handling`:
 - File handling is read and write of data
   - If we make variable in a program and we want that after execution of programme, the data (variable) remain with us then we have to give the data or put the data in file for future use. It will get stored in secindary memory
-  ![alt text](image.png)
+  ![File Handling](/Image/C/FileHandling.png)
   - ptr will point the file as in ram it cannot be accessed by its name but can be accessed by address of its first bytes
 - Data-typr for file handling is in `stdio.h`
 

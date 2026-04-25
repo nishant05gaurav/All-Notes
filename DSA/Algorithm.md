@@ -225,19 +225,20 @@ It is a set of finite rules or instructions to be followed in calculations or ot
 ![Masters Theorem](https://imgur.com/UXE72fV.png)
 
 ## Binary Search
-- Algorithm used for finding a target value within a *sorted array* or list
+- Algorithm used for finding a target value within a ***sorted array*** or ***list***
 - Repeatedly divide the search interval in half until the target value is found or determined to be not present in the array.
-- Here we need two index pointers: **low** and **high** and if the  low croses the high then index is not found.
+- Here we need two index pointers: **low** and **high** and if the low croses the high then index is not found.
 - No. of comparison are less than linear search.
 - Time Complexity:
   - Minimum = O(1)
+    - Middle Element
   - Maximum = O(log n)
+    - It depends on the height of the tree
 - **Need for Binary Search** because the inefficiency of linear search when dealing with large datasets.
-- We **Use Binary Search** because of its speed and efficiency, It drastically reduces the number of comparisons required to find a target value compared to linear search. Hence, ideal choice where quick search operations are necessary, such as searching in databases, sorting algorithms like quicksort and mergesort, and more.
-
-### Binary Search Iterative Method
+- We **Use Binary Search** because of its speed and efficiency. It drastically reduces the number of comparisons required to find a target value compared to linear search. Hence, ideal choice where quick search operations are necessary, such as searching in databases, sorting algorithms like quicksort and mergesort, and more.
 
 ```c
+// Iterative Method
 int Bin search(A, n, key)
 {
   l = 1;
@@ -259,13 +260,8 @@ int Bin search(A, n, key)
   }
   return 0;
 }
-```
 
-![Binary Search](https://imgur.com/TPbUq8L.png)
-
-### Binary Search Recursive Method
-
-```c
+// Recursive Method
 Algorithm RBinSearch (l, h, key)
 {
 
@@ -300,7 +296,7 @@ Algorithm RBinSearch (l, h, key)
        / \   / \
       4  5   6  7
   ```
-  ![Binary Tree](image-1.png)
+  ![Binary Tree](/Image/DSA/ArrayRepresentation-BT.png)
 
 ### Need and Usage of Binary Trees
   - **Efficient Searching and Sorting**: Enables efficient searching (lookup in a dictionary) and sorting due to their inherent ordering.
@@ -379,6 +375,8 @@ Algorithm RBinSearch (l, h, key)
 - Always the direction of adjustment is upward
 - _Time Complexity_: **O(1) to O(log n)**
 
+![Insertion&Deletion - Heap](/Image/DSA/Insertion_Deletion-Heap.png)
+
 ### Deletion element from Heap
 - **Time Complexity**: log n
 - **Delete Root**: The element at the root (the maximum in a max-heap, minimum in a min-heap) is removed
@@ -391,10 +389,9 @@ Algorithm RBinSearch (l, h, key)
   - Min-Heap: After deletion and heapify down, the new root element will be the next smallest element in the heap
 - **Idea**: Delete the element & fill it on an empty array-sorted array
 
-  ![Insertion & Deletion fromm Heap](https://imgur.com/orucdLq.png)
-
 ## Heap Sort
-- Heap-sort is an efficient sorting algorithm that utilizes the properties of a heap data structure to sort an array in `O(n log n)` time complexity
+- Heap-sort is an efficient sorting algorithm that utilizes the properties of a heap data structure to sort an array in **`O(n log n)`** time complexity
+ ![Heap-Sort](/Image/DSA/Heap-Sort.png)
 - *Process*
   1. **Create a Maximum Heap**: Convert given array to maximum heap
   2. **Extract Maximum**:
@@ -410,8 +407,9 @@ Algorithm RBinSearch (l, h, key)
 
 ## Heapify
 - Process of creating heap from an array
+ ![Heapify](/Image/DSA/Heapify.png)
 - **Main idea** is to start from the last non-leaf node (i.e., the parent of the last element) and repeatedly heapify each subtree to build the heap from the bottom up.
-- Time Complexity: `O(log n)`
+- Time Complexity: **`O(n)`**
 
 ## Priority Queue
 - A priority queue (**Prioritizing Elements for Efficient Processing**) is a data structure where elements have priorities and they can be inserted or deleted accordingly
@@ -618,7 +616,7 @@ Here, is an example:
 ## Travelling Sales Problem
 - **Problem**: We have to start from one vertex and travel all other vertices once and to return back to the same starting vertex and the cost of tracking shoukd be minimum
 - Order of execution is different/ but the recursion tree in the figure look:
-![Travelling Sales Problem](/Images/image-6.png) 
+![Travelling Sales Problem](/Image/DSA/TravellingSalesmanProblem.png) 
 
 ## Reliability Design-DP
 - It signifies the optimal number of device copies having max reliability with minimum cost

@@ -18,11 +18,11 @@
 
 #### `Memory Layout of C Program`:
 
-![alt text](https://imgur.com/u0Wv4E1.png)
+![Memory-CPU](https://imgur.com/u0Wv4E1.png)
 
 #### `Time Complexity and Big-O Notation`:
-![alt text](https://imgur.com/L2JUO1G.png)
-![alt text](https://imgur.com/W6FXMs8.png)
+![Time-Complexity](https://imgur.com/L2JUO1G.png)
+![Time-Complexity](https://imgur.com/W6FXMs8.png)
 
 #### *`Asymptotic Notations`*
 - Asymptotic notation gives us an idea about how good a given algorithm is compared to some other algorithm.
@@ -40,7 +40,7 @@
 - Here, `n` is the input size, and `g(n)` is any complexity function.
 - If a function is `O(n)`, it is automatically `O(n^2)` as well! Because it satisfies the equation given above.
 
-![alt text](https://imgur.com/mkpSvzK.png)
+![Big-O Notation](https://imgur.com/mkpSvzK.png)
 
 #### **`Big Omega Notation (Ω)`**:
 - Describe an asymptotic lower bond.
@@ -50,7 +50,7 @@
 ```
 - If a function is `Ω(n^2)` it is automatically `Ω(n)` as well since it satisfies the above equation.
 
-![alt text](https://imgur.com/hofxkjv.png)
+![Big-Ω Notation](https://imgur.com/hofxkjv.png)
 
 #### **`Big theta notation (θ)`**:
 - Let `f(n)` define the running time of an algorithm.
@@ -64,10 +64,10 @@
     0  ≤ c2 g(n)  ≤  f(n) ≤ c1 g(n)      ∀    n ≥ no.  
 
 ```
-![alt text](https://imgur.com/a0TIw2T.png)
+![Big-0 notation](https://imgur.com/a0TIw2T.png)
 - Big theta provides a better picture of a given algorithm, most of the interviewers expect you to provide an answer in terms of Big Theta when they say **Order Of** as it provides the exact posibility of the function to lie at that value. We generally use Big Oh and Big Omega when tthe exact posibility of the gfunction is not known to us
 
-![alt text](https://imgur.com/J8WmSYn.png)
+![Functions with their run-time](https://imgur.com/J8WmSYn.png)
 
 #### Properties of Asymptotic Notations:
 - If `f(n)` is `O(g(n))` then that of `a*f(n)` is same
@@ -121,7 +121,7 @@ f(n) * d(n) = O (g(n)*e(n))
 - Not everyone’s computer is equally powerful. So, We just measure the growth of time with an increase in the input size.
 - Asymptotic analysis is the measure of how time (runtime) grows with input.
 
-![alt text](https://imgur.com/jcvH6cV.png)
+![TC-Trick](https://imgur.com/jcvH6cV.png)
 
 ### Abstract Data Types:
 - Provide a high-level description of data and the operations that can be performed on that data, without specifying the implementation details
@@ -129,7 +129,7 @@ f(n) * d(n) = O (g(n)*e(n))
 - Set of operations that can be performed on the data, along with their properties and constraints, but they do not dictate how these operations are implemented.
 - ADTs serve as a blueprint or a template for creating concrete data structures. They encapsulate the data and operations associated with it, hiding the implementation details from the user.
 
-![alt text](https://imgur.com/nCAq3Zf.png)
+![Abstract-DataType](https://imgur.com/nCAq3Zf.png)
 
 ```c
 // example on ADT-Array:
@@ -289,7 +289,7 @@ float avg;
 - No. of variables is "6", This means 1st array will get 3 & 2ns Array will get 3
 - Called array of arrays
 
-![alt text](https://imgur.com/97lv8NU.png)
+![2D-Array](https://imgur.com/97lv8NU.png)
 
 ```c
 int A[3][3], B[3][3], C[3][3], i, j;
@@ -356,13 +356,13 @@ cout << vec.at(2);   // 45
 ```
 
 - How **vectors** are created inside the memory:
-  ![alt text](https://imgur.com/901J4ZB.png)
+  ![Vector Creation](https://imgur.com/901J4ZB.png)
 
 ## Sub-Array
 
 - Sub-Array are the continous part of an array
 - If an array contains __n__ number of elements then total number of possible sub-arrays: `n(n+1)/2`
-  ![alt text](https://imgur.com/YB3Sr02.png)
+  ![SubArray](https://imgur.com/YB3Sr02.png)
 - For printing all the possible sub-arrays we need a starting index and an ending index upto which it'll print
   ```cpp
   int n = 5;
@@ -421,16 +421,16 @@ int maxSubArray(vector<int> &nums)
 
 ### Moore's Voting Algorithm
 #### eg: `1 2 2 1 1`
-![alt text](https://imgur.com/2PBzjuH.png)
+![Moore's Voting Algorithm](https://imgur.com/2PBzjuH.png)
 
 
 ![alt text](image.png)
 
 ### Pow(X,N) Power exponential Problem
-![alt text](https://imgur.com/RFq1rre.png)
+![Power exponential Problem](https://imgur.com/RFq1rre.png)
 
 ### Buy and Sell Stock Problem
-![alt text](https://imgur.com/ep6STpD.png)
+![Buy and Sell Stock Problem](https://imgur.com/ep6STpD.png)
 
 ### Binary Search
 - Binary Search is applied only on monotonic functions (where values will be either in asceding or descending)
@@ -438,7 +438,7 @@ int maxSubArray(vector<int> &nums)
 
 
 ### Tree
-![Tree](image-2.png)
+![Tree](/Image/DSA/Tree.png)
 - A tree is a finite set of one or more data items (`nodes`), such that: here is a special node called the *root node* of the tree and the remaining nodes are partitioned into `n>=0` disjoint subsets, each of which is itself a tree, and they are known as *subtrees*.
 - *Degree of the tree*: Highest degree in the node of the tree 
 - *Leaf Node*(Terminal Node) has degree 0
@@ -471,7 +471,7 @@ int maxSubArray(vector<int> &nums)
   - *B+ Tree*: It is a variant of B-Tree where all data is stored only in leaf nodes and internal nodes act as guides. Leaf nodes are linked, allowing fast sequential and range access.
   
 ### Binary Tree:
-![BINARY TREE](image-4.png)
+![BINARY TREE](/Image/DSA/Binary-Tree.png)
 - A binary tree is defined as a finite set of elements, called nodes, such that
   - T is empty (called the Null Tree or empty tree), or
   - T contains a distinguished node R, called the root of T, and the remaining nodes of T form an ordered pair of disjoint binary trees T1 and T2
@@ -488,4 +488,4 @@ int maxSubArray(vector<int> &nums)
 - f(n) = `O(log n)`
 - Duplicate values are not allowed in BST (by default)
 - In `worst case` scenario its time complexity becomes `O(n)`
-![BST](image-5.png)
+![BST](/Image/DSA/%20BST.png)

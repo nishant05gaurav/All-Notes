@@ -11,7 +11,7 @@
 
 ### Need CSS & JavaScript
 
- ![alt text](https://imgur.com/0M56JUK.png)
+ ![Need CSS & JavaScript](https://imgur.com/0M56JUK.png)
 - **`CSS`** is primarily used for styling and formatting HTML elements on a webpage. It controls the visual presentation of the content.
   - Example: Setting the background color, adjusting the font size, defining the layout of elements using flexbox or grid, adding animations or transitions, etc.
 - **`JavaScript`** is used for adding interactivity and dynamic behavior to HTML pages. It enables developers to manipulate the HTML structure, respond to user actions, and modify CSS styles dynamically.
@@ -26,7 +26,7 @@
   - Search engines like Google often prioritize indexing the content of the `index.html` file when crawling websites. A well-optimized `index.html` page can improve a website's visibility hence better for SEO (Search Engine Optimazation).
 
 ### A Basic HTML Page
-![alt text](https://imgur.com/VfkHImO.png)
+![Basic HTML Page](https://imgur.com/VfkHImO.png)
 - A tag is like a container for either content or other HTML tags.
   **`HTML Document --> Browser --> Rendered Page`**
 - Most of the HTML elements have openning and closing tag with content in between opening and closing tags.
@@ -140,14 +140,14 @@ image doesn't loads.
 
 #### `Subscript & Suoerscript Tag`
 
-![alt text](https://imgur.com/gqxFn0C)
+![Subscript & Suoerscript](https://imgur.com/gqxFn0C)
 
 #### `pre Tag`
 
 - Used to define preformatted text
 - It preserves both spaces and line breaks within the text, displaying it exactly as it appears in the HTML code.
 
-![alt text](https://imgur.com/j4u2QA4.png)
+![pre Tag](https://imgur.com/j4u2QA4.png)
 
 #### `div tag`
 
@@ -166,7 +166,7 @@ image doesn't loads.
 - With using the right tag in right place, results in a better page ;ayout, betterr indexing by search engines and better user experiences
 - Use the `<header>`, `<main>` & `<footer>` tags effectively. This represennts the correct layout of a website
 
-![alt text](https://imgur.com/2TJH1Yz.png)
+![Page Layout](https://imgur.com/2TJH1Yz.png)
 
 ### Lists
 
@@ -272,7 +272,7 @@ For Definition List:
 - Two types:
   - Rowspan: Table cell to span multiple rows 
   - Colspan: Table cell to span multiple columns
-![alt text](https://imgur.com/GNq8So6.png)
+![Colspan Attribute](https://imgur.com/GNq8So6.png)
 ```html
 
 <th colspan="3">Nishant</th>

@@ -110,7 +110,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - Consists of basic objects called `entity` and a `relationship` among their objects and `attributes` that defines their properties
 - Free from ambiguties and provides a standard and logical way of visuaizing data
 - Basically, it is a diagramatical represenataion that are easy to understand even by non-technical users
-  ![alt text](diagram-export-11-30-2024-11_04_32-PM.png)
+  ![Entity](/Image/DBMS/Entity.png)
 
 ## Entity
 
@@ -141,7 +141,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - These are the units that describe the characteristics of entites
 - For each attribute there is a set of permitted values called domain
 - In ER diagram, it is represented by _ellipse_ or _oval_, while in relational model by separate column
-![alt text](diagram-export-12-1-2024-9_10_03-AM.png)
+![Attribute](/Image/DBMS/Attribute.png)
 - A relationship can also possible among those entity which lie on single entity or among entities within the same entity sets.
   - These are called **recursive relationships** or **self-referential relationships**
   - It occurs when an entity in an entity set is related to another entity of same set. Hence, represent hierarchical or peer-to-peer relationships within a single type of entity
@@ -157,13 +157,13 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - It is an association between two or more entites of same or different entity set
 - No representation in ER Diagram as it is an instance or data
 - In relational model, reprsented by either using a row in a table
-  ![alt text](diagram-export-12-1-2024-11_09_48-AM.png)
+  ![Relationship](/Image/DBMS/Relationship-I.png)
 - `1:1` - At most have 1 relation and its not necessary to participate
 - `1:M` & `M:1`: - At most n participation
-  ![alt text](diagram-export-12-15-2024-11_49_28-AM.png)
+  ![Relationship](/Image/DBMS/Relationship-II.png)
 - Every **1:1** is **M:1** and **1:M**
 
-## Relationship set
+## Relationship Set
 
 - A set of similar type of relationship
 - Represented using a diamond or rhombus in ER Diagram
@@ -173,14 +173,14 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
   - Degree
   - Carditionally Ratio/ Participation Constrains
 - A relationship can also possible among those entity which lie on single entity
-  ![alt text](https://imgur.com/na491D9.png)
+  ![Relationship set](https://imgur.com/na491D9.png)
 
 ## Degree of a Relationship Set
 
 - Number of entity set participating in the relationship set
 - Mostly these are binary
 - **Types**:
-  ![alt text](https://imgur.com/46ZICnf.png)
+  ![Degree of a Relationship Set](https://imgur.com/46ZICnf.png)
 
 ## Cardinalities / Cardinality Ratio: (MAPPING)
 
@@ -197,7 +197,7 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
   - _Min-Cardinality_: Minimum number of times an entity can occur in relationship
 - _Partial Participation_: When min-cardinality is zero (`c = 0`)
 - _Total Participation_: When min-cardinality is greater than zero (`c > 0`)
-  ![alt text](https://imgur.com/Pt3ceCX.png)
+  ![Participation Constraints](https://imgur.com/Pt3ceCX.png)
 
 ## Functional Dependency
 
@@ -220,12 +220,12 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
     - Here, f(a) = 1 then f(a) can not be equal to 5
     - Its one-to-one
 - _Types_:
-  ![alt text](https://imgur.com/pDNbW7x.png)
+  ![Functional Dependency](https://imgur.com/pDNbW7x.png)
 
 ### Question on Functional Dependency
 
 - Find which is not valid dependency:
-  ![alt text](https://imgur.com/D3Lnebe.png)
+  ![Question on Functional Dependency](https://imgur.com/D3Lnebe.png)
 - `NOTE`: when (α --> β)
   - If all α's are unique then we don't need to check as all are correct
   - If all β's are same then we don't need yo check as all are correct
@@ -235,12 +235,12 @@ DBMS follows **_ACID_** rule during transaction and these are as follows:
 - Attribute closure/ Closure on attribute set/ closure of attribute set
 - It can be defined as a set of attributes which can be functionally determined from it
 - Denoted by `F+`
-  ![alt text](https://imgur.com/yBYXcJi.png)
+  ![Armstrong Axioms](https://imgur.com/yBYXcJi.png)
 
 ### Armstrong Axioms:
 
 These are the basic rules of functional dependencies
-![alt text](https://imgur.com/x4H9Q13.png)
+![Armstrong Axioms](https://imgur.com/x4H9Q13.png)
 
 - Union and Decomposition are always used in right side of the expression
 
@@ -256,7 +256,7 @@ These are the basic rules of functional dependencies
    - If the closures match in both directions (F using G and G using F), the two sets are equivalent.
    - If one set's closure is a subset or superset of the other, it indicates a dependency relationship between the two sets.
 
-![alt text](https://imgur.com/CFBfL1i.png)
+![FunctionalDependencies](https://imgur.com/CFBfL1i.png)
 
 ```md
 - If F ⊆ G: F’s functional dependencies are a subset of G’s.
@@ -274,8 +274,9 @@ These are the basic rules of functional dependencies
   - On the right side of the FD
   - Entire set
 
-![alt text](https://imgur.com/dJ4LZ5j.png)
-
+<!-- ![Redundant](https://imgur.com/dJ4LZ5j.png) -->
+![Redundant](/Image/DBMS/Question.png.png)
+![FD](/Image/DBMS/FD-Question.png)
 - Steps:
   - First write separately using Decomposition rule wherever more than 1 attribute is present on the right-hand side
     - Now the possibility of redundancy in right hand side not exist b/c we have decomposed them
@@ -304,7 +305,7 @@ These are the basic rules of functional dependencies
 - It is an efficient version of superkey
 - A superkey is called a candidate key whose proper sub-set is not a superkey
 - It can be multiple is numbers
-  ![alt text](https://imgur.com/4Vb8OBm.png)
+  ![Candidate Key](https://imgur.com/4Vb8OBm.png)
 - Every Candidate Key is not a SuperKey but to become a Candidate Key, it should be SuperKey.
 
 ### Primary Key
@@ -312,14 +313,14 @@ These are the basic rules of functional dependencies
 - It is that candidate key which is selected by the administrator as the primary mean to identify tuples
 - It's number is only one
 
-![alt text](https://imgur.com/CjbySGI.png)
-![alt text](https://imgur.com/V9IsB1j.png)
+![Primary Key](https://imgur.com/CjbySGI.png)
+![Primary Key](https://imgur.com/V9IsB1j.png)
 
 ## Normalization
 
 - Normalization is a process to remove data-redundancy
 
-![alt text](https://imgur.com/wdinXcK.png)
+![Normalization](https://imgur.com/wdinXcK.png)
 
 - **Redundancy vs Inconsistemcy**:
 
@@ -347,7 +348,7 @@ These are the basic rules of functional dependencies
 - A table is said to be in **2 NF** if:
   - Must be in 1 NF
   - No Partial Dependency
-    ![alt text](https://imgur.com/MqurwVG.png)
+    ![2 NF](https://imgur.com/MqurwVG.png)
 - **Prime Attribute**: Those attribute which are a part of Candidate Key
 - **Non-Prime Attribute**: Those attribute which are not a part of Candidate Key
 - If an attribute is a part of any one of the CK, said to be prime attribute. Here, C only depends on B (not to prime attribute AB) So, it's partial dependent.
@@ -373,7 +374,7 @@ These are the basic rules of functional dependencies
   - `X` is a super key
   - `Y` is a Prime Attribute (each element of Y is part of some candidate key)
 - 3rd normal form do not allow transitive Dependency
-![alt text](diagram-export-11-30-2024-1_19_57-AM.png)
+![alt text](/Image/DBMS/3NF.png)
 
 ### BCNF(Boyce-Codd Normal Form)
 - If there is a dependency from Alpha to beta where Alpha is prime attribute or nonprime attribute and beta is prime attribute in this case we deals with BCNF
@@ -383,24 +384,24 @@ These are the basic rules of functional dependencies
 - By using BCNF, a database will remove all redundancies based on functional dependencies
 - It was developed to address anomalies that 3NF couldn't resolve
 - BCNF tables are also 1NF, 2NF, and 3NF
-  ![alt text](diagram-export-12-12-2024-11_23_27-PM.png) 
+  ![BCNF](/Image/DBMS/BCNF-I.png) 
 - A table can be in 3rd normal form but not in BCNF:
 - Sometimes, when we decompose a table, it can happen that some dependencies from the child table do not propagate. This is called a dependency that is not child-preserving. This typically occurs when the table is in 3rd normal form (3NF) or Boyce-Codd normal form (BCNF). Such issues are not possible in 1st normal form (1NF) or 2nd normal form (2NF).
-  ![alt text](diagram-export-12-12-2024-11_17_40-PM.png)
+  ![BCNF](/Image/DBMS/BCNF-II.png)
 
 ### Lossless Join Decomposition || Non-Additive Decomposition:
 - If you decompose one table into more than one table during normalization, and when you combine them, you should get the original table back, but that doesn't happen, so decomposition is lossy.
 - When you further convert the parent table into child tables, and when you combine them to get the parent table back, it doesn't fully return, and this is what is referred to as lossy decomposition.
 - It is a mandatiry property that always holds good
 - It guarantees that the extra/ loss row generation problem doesn't occur after decomposition
-  ![alt text](diagram-export-12-13-2024-8_10_34-PM.png)
+  ![Non-Additive Decomposition](/Image/DBMS/Non-Additive-Decomposition.png)
   - Extra tupple or less tupple bith are wrong (no-lossless)
 - Important:
   - If the common attribute in both the table is `CK` then there is no _lossy decomposition_
   - All attributes must be present in the child table
   - There must be some kind of common attribute present in both the tables
   - Only common is not the only thing, that common attribute must have unique and distinct values
-  ![alt text](image-1.png)
+  ![Lossless Join Decomposition](/Image//DBMS/LosslessJoinDecomposition.png)
 - __dependency Preserving__: When we combine 2 relational tabel then, if the final Functional Dependency will be equal to the Functional Dependency of the parent table
 
 
@@ -435,7 +436,7 @@ These are the basic rules of functional dependencies
 - To get faster access, we use index (index-table) similar as book-indexing
 - We may apply binary search in case of sorted block 
   - This is also time consuming if the number of blocks is very much
-  ![alt text](diagram-export-12-14-2024-10_22_43-PM.png)
+  ![Indexing](/Image/DBMS/Indexing.png)
 - Sparse Indexing: 
   - It is possible when every record from the main file don't get entry in the index file
   - Only store one `SK` and `BP` of a record block
@@ -460,7 +461,7 @@ These are the basic rules of functional dependencies
 - Number of enteries in index file is equal to the number of blocks acquired by the main file
 - Number of access = `log n + 1` block
 
-![alt text](diagram-export-12-15-2024-12_06_11-AM.png)
+![Primary Indexing](/Image/DBMS/PrimaryIndexing.png)
 
 ### Clustering Indexing
 - Main file is stored on some non-primary key attribute 
@@ -474,9 +475,9 @@ These are the basic rules of functional dependencies
 - Dense Indexing
 - No. of blocks access  >= `log n + 1`
 - No. of entry in IF = no. of entry in main file
-![alt text](diagram-export-12-15-2024-12_22_16-AM.png)
+![Secondary Indexing](/Image/DBMS/Secondary-Indexing-II.png)
 
-![alt text](diagram-export-12-15-2024-9_29_02-PM.png)
+![Secondary Indexing](/Image/DBMS/Secondary-Indexing-I.png)
 
 ## Query Language
 - Language in which user request some information from database
@@ -486,7 +487,7 @@ These are the basic rules of functional dependencies
 | User gives process and operations to produce result | User gives only desired information without giving process to extract it |
 | User tells what data to be retrieved and how |  |
 
-  ![alt text](diagram-export-12-15-2024-10_30_42-PM.png)
+  ![Query Language](/Image/DBMS/Query-Language.png)
 - We use RDBMS (practical implementation of relational model) and SQL is used to write queries on it
 - Relational algebra and relational calculas arew mathematical system/ query language used on Relational Model
 
@@ -520,7 +521,7 @@ These are the basic rules of functional dependencies
 - Syntax: σ$_{condition/predicate}$(table name)
 - minimum row selected = 0
 - maximum row selected = all
-![alt text](diagram-export-12-15-2024-11_05_34-PM.png)
+![Select](/Image/DBMS/Select.png)
 - Nesting: 
   - σ$_{condition}$(σ$_{condition}$(table name))
   - σ$_{condition}$ ^/V σ$_{condition}$(table name)
@@ -569,7 +570,7 @@ These are the basic rules of functional dependencies
     - *Recovery Subsystem* takes care of it
 
 ### Transaction State:
-![alt text](diagram-export-1-22-2025-7_29_21-PM.png)
+![Transaction State](/Image/DBMS/Transaction State.png)
   - Ac: First state of every transaction (RAM)
   - Pc: Transaction executes its final step, but data is not saved to the database
   - C: All operations are executed successfully, all the effects are permanently saved in database
@@ -598,22 +599,22 @@ These are the basic rules of functional dependencies
 
 - It is also called *Uncommited Read* as well as *Reasd After Write* 
 - When a transaction reads data that is being modified by another transaction (i.e, running concurrently and not yet committed)
-  ![alt text](image-7.png) 
+  ![Dirty Read Problem](/Image/DBMS/DirtyReadProblem.png) 
   - Here, Reader should commit first
 - To overcome any failure and probllem, dirty reader shouuld commit its changes after commitment of the transaction that it is using 
 
 ### Unrepeatable Read
 - It occurs when two/ more read operation of some transaction read different values of same variable 
-  ![alt text](image-2.png)
+  ![Unrepeatable Read](/Image/DBMS/UnrepeatableRead.png)
 
 ### Phantom Read Problem
 - When a transaction reads a variable once but when it tries to read it again an eerror happens saying that the variable doesn't  exist anywhere
-  ![alt text](image-3.png)
+  ![PhantomReadProblem.png](/Image/DBMS/PhantomReadProblem.png)
 
-### Lost update Problem
+### Lost Update Problem
 - It happens at the time of Write-Write Conflict
 - When two different transaction, try to update the same column on the same row within same time
-  ![alt text](image-4.png)
+  ![Lost update Problem](/Image/DBMS/LostUpdateProblem.png)
 
 ### Serial and Non-Serial Scheduling
 
@@ -626,17 +627,17 @@ These are the basic rules of functional dependencies
     - Serializable
 - Serial: 
   - A type of schedule where one transaction is executed completely befoe starting the another transaction 
-    ![alt text](image-5.png)
+    ![Serial](/Image/DBMS/Serial.png)
 - Non-Serial:
   - Interleaving of operations (switching b/w different transactions)
-    ![alt text](image-6.png) 
+    ![Non-Serial](/Image/DBMS/Non-Serial.png) 
 - Serailizable:
   - Seriazability of schedules is used to find non-serial schedules that allow the transaction to execute concurrently without interleaving one-another
   - If non-serialized schedule results same as serialized schedule then it is called serializable
 
 ### Conflict Serializability
 - A schedule is conflict serializable if after swapping of non-conflicting operations, it can transform into serial schedule
-  ![alt text](diagram-export-1-25-2025-11_41_30-PM.png) 
+  ![Conflict Serializability](/Image/DBMS/Conflict-Serializability.png) 
 
 ### View Serializability
 - In case of CS, if there is a loop, then the transaction may/ may not be serializable. So, we cheeck view serializable
@@ -647,7 +648,7 @@ These are the basic rules of functional dependencies
   - Final read should be same
   - Mid-sequence should be same as well
   
-![alt text](diagram-export-3-3-2025-9_53_16-PM.png)
+![View-Serializability](/Image/DBMS/View-Serializability.png)
 
 ### Recoverability of Schedule
 - Schedules are normally of three types namely: Cascadless, Recoverable and Non-Recoverable
@@ -715,20 +716,20 @@ These are the basic rules of functional dependencies
 - Ways to lock: 
   - Shared mode: Denoted by lock-S(Q), transaction can perform read operation and any other transaction can also obtain same data at the same time (read only)
   - Exclusive mode: Denoted by lock-X(Q), transaction can perform both read and write operation, any other transaction cannot obtain either shared/ exclusive mode lock
-  ![alt text](image-14.png)
-  ![alt text](image-15.png)
+  ![Lock Based Protoco](/Image/DBMS/Lock-Based-Protocol-I.png)
+  ![Lock Based Protoco](/Image/DBMS/Lock-Based-Protocol-II.png)
 
 
 ### 2PL (2 Phase Locking): 
 - Each transaction has 2 phases: shrinking and growing
-   ![alt text](image-12.png) 
+   ![2PL-I](/Image/DBMS/2PL-I.png) 
 - In growing phase, transaction can only obtain locks but cannot release any lock (ACQUIRE)
 - In shrinking phase, transaction can only release locks but cannot acquire any lock (RELEASE)
 - transaction can perform rate or write in both the phases
 - Order of serializability = order of transactions in reaching lock point
 - May generate unrecoverable schedules and cascading rollbacks
 - Do not ensure freedom from deadlock and starvation
-  ![alt text](image-13.png)
+  ![2PL-II](/Image/DBMS/2PL-II.png)
 
 ### Conservative or Consecutive or Static 2PL
 - Basic idea is to give all the necessary logs to transaction before starting other transactions hence no growing phase transaction first acquires all locks and directly start from lock point starvation can be there
@@ -738,10 +739,10 @@ These are the basic rules of functional dependencies
 - conflict-serializability and view-serializability
 - non-recoverable and cascading rollbacks - possible 
   - dirty read is there
-  ![alt text](image-11.png)
+  ![Static 2PL](/Image/DBMS/Static-2PL.png)
   
 ### Rigrous 2PL:
-  ![alt text](image-10.png)
+  ![Rigrous 2PL](/Image/DBMS/Rigrous-2PL.png)
 - An improvement over 2PL where try to ensure recoverability and cascading rollbacks
 - It requires that all locks must be held until transaction commit that is no shrinking phase
 - ensures:
@@ -755,7 +756,7 @@ These are the basic rules of functional dependencies
 - In the shrinking phase unlocking of exclusive locks are not allowed but unlocking of shared locks can be done 
 - All the properties are same as rigorous but provide better concurrency and efficiency is also more
 - Since we are only unlocking shared locks (only read) then there cannot be any dirty read with the transition
-  ![alt text](image-9.png)
+  ![Strict 2PL](/Image/DBMS/Strict-2PL.png)
 
 ### Graph Based Protocol
 - We need some additional information for this protocol
@@ -774,7 +775,7 @@ These are the basic rules of functional dependencies
   - Data items can be unlocked any times
   - Data items once unlocked cannot be locked again
 Example:
-  ![alt text](image-8.png)
+  ![Tree-Protocol](/Image/DBMS/Tree-Protocol.png)
 
 ### Properties achieved
 - View-serialization and conflict-serialization due to directional flow 

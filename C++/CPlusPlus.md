@@ -26,7 +26,6 @@
   - Any entity in the system that can be defined as a set of properties and set of operations performed using entity property set 
   - It allows decomposition of a problem into several entities called **object** and then building data and functions around them 
 
-<<<<<<< HEAD
 ### Properties of OOPs 
 1. **Encapsulation**: Wrapping up of data and functions into a single unit 
 2. **Data Hiding**: The principle of restricting access to the internal state and implementation details of a class, typically achieved by using access specifiers like *private* and *protected* 
@@ -42,34 +41,16 @@
 - Class is a means to achieve encapsulation 
 - Class members are by default private 
 
-  ![alt text](https://imgur.com/PsQj5LJ.png) 
-
-### Properties of OOPs
-1. **Encapsulation**: Wraping up of data and fxn into a single unit
-2. **Data Hiding**: The principle of restricting access to the internal state and implementation details of a class, typically achieved by using access specifiers like *private* and *protected*
-3. **Abstraction**: Hiding the complex implementation details of a system and exposing only the necessary and relevant features
-4. **Polymorphism**: Allows a function, method, or object to take on many forms, enabling a single interface to represent different underlying data types or classes, typically achieved through inheritance and function overriding
-5. **Inheritance**: Concept where a new class (derived class) is created from an existing class (base class), allowing the derived class to inherit and optionally override or extend the properties and behaviors (methods) of the base class
-6. **Data Abstraction**: Process of reducing a body of data to a specific representation of a whole. Classes use the concept of data abstraction, known as Abstract Data Types
-
-## Concept of Classes and Objects
-- **Class** is a blueprint of an object while **Object** is a run time entity and is an instance of a class
-- Class is a description of Object's property set and set of operations
-- Creating a class is as good as defining a new data type 
-- Class is a means to achieve encapsulation
-- Class members are by default private
-  
-  ![alt text](https://imgur.com/PsQj5LJ.png)
->>>>>>> 9b002238bda98f0ca1358900c4347782d54864e9
+  ![Define&Includes-C](https://imgur.com/PsQj5LJ.png) 
 
   ```md
   TOKENS (smallest individual unit in a program)
     |
     |__ Types: 1. Keyword
-               2. Identifiers (name of variables, functions that are created by programmers)
-               3. Constant
-               4. String
-               5. Operator
+               1. Identifiers (name of variables, functions that are created by programmers)
+               2. Constant
+               3. String
+               4. Operator
   ```
 
 ### Output Instruction 
@@ -94,7 +75,7 @@
   - Must be initialised during declaration 
   - Initialized with already declared variables only 
 
-![alt text](https://imgur.com/8Ip81tW.png) 
+![Reference Variable](https://imgur.com/8Ip81tW.png) 
 
 - **Use Cases**: 
   - **Function Parameters**: Pass variables by reference to avoid copying large structures or to allow the function to modify the argument. 
@@ -446,8 +427,8 @@ int main()
     ``` 
 - This will also give error, since c gets it value from c1 which further leds to recursion here 
 
-  ![Alt text](https://imgur.com/JMqsHrg.png) 
-  ![Alt text](https://imgur.com/iOqc8fB.png) 
+  ![Constructors](https://imgur.com/JMqsHrg.png) 
+  ![Constructors](https://imgur.com/iOqc8fB.png) 
 
 ## Operator Overloading 
 - When an operator is overloaded with multiple jobs, it is known as operator overloading. 
@@ -900,26 +881,26 @@ void fun()
 ### Single Inheritance 
 - In single inheritance, a class is allowed to inherit from only one class. i.e., one subclass is inherited by one base class only. 
  
-  ![alt text](image.png) 
+  ![Single Inheritance](/Image/C++/Single-Inheritance.png) 
 
 ### Multilevel Inheritance 
 - In this type of inheritance, a derived class is created from another derived class. 
-  ![alt text](image-1.png)
+  ![Multilevel-Inheritance](/Image/C++/Multilevel-Inheritance.png)
 
 ### Multiple Inheritance 
 - Multiple Inheritance is a feature of C++ where a class can inherit from more than one class. i.e., one subclass is inherited from more than one base class. 
 
-  ![alt text](image-3.png) 
+  ![Multiple-Inheritance](/Image/C++/Multiple-Inheritance.png) 
 
 ### Hierarchical Inheritance 
 - In this type of inheritance, more than one subclass is inherited from a single base class. i.e., more than one derived class is created from a single base class. 
 
-  ![alt text](image-4.png) 
+  ![Hierarchical-Inheritance](/Image/C++/Hierarchical-Inheritance.png) 
 
 ### Hybrid (Virtual) Inheritance 
 - Hybrid inheritance is implemented by combining more than one type of inheritance. For example: Combining hierarchical inheritance and multiple inheritance. 
 
-  ![alt text](image-5.png) 
+  ![Hybrid-Inheritance](/Image/C++/Hybrid-Inheritance.png) 
 
 ### Multipath Inheritance 
 - A derived class with two base classes and these two base classes have one common base class is called multipath inheritance. 
@@ -1038,7 +1019,7 @@ void fun()
 - **Public Mode**: If we derive a subclass from a public base class. Then the public member of the base class will become public in the derived class and protected members of the base class will become protected in the derived class. 
 - The private members in the base class cannot be directly accessed in the derived class, while protected members can be directly accessed. 
 
-  ![alt text](diagram-export-2-23-2025-11_07_31-PM.png) 
+  ![Visibility Modes ](/Image/C++/VisibilityModesCPP.png) 
 
 ## Constructor & Destructor in Inheritance 
 - **Some Rules**: 
@@ -1214,14 +1195,14 @@ int main()
 2. **Method overriding** -------> function overriding ------> function name as well as its prototype is same in parent in child class. 
 3. **Method Hiding** --------> function hiding ------> function name is same; the only difference is in the arguments. 
 
-![Alt text](https://imgur.com/Qge1BHX.png) 
+![Method Overhiding](https://imgur.com/Qge1BHX.png) 
 
-![Alt text](https://imgur.com/52Peam8.png) 
+![Method Overhiding](https://imgur.com/52Peam8.png) 
 
 - There is an error (==> since obj jo hai wo B ka hai to f2 function B mein searrch hoga , lekin yahan pe f2 function to hai lekin prototype different hai esliye errror show karega.) 
 
 - **_Early Binding_**: In this concept, it is the compiler's duty to match the accurate function during the compilation. 
-  ![Alt text](https://imgur.com/VRkcTTg.png) 
+  ![Method Overhiding](https://imgur.com/VRkcTTg.png) 
  
 ## Function Overloading 
 - For function overloading, all the versions of the function must lie in the same class; otherwise, we cannot say it is function overloading. 
@@ -1267,11 +1248,11 @@ int main()
 
 ### Virtual Function Working Concept 
 
-![Alt text](https://imgur.com/7bCblKg.png) 
+![Virtual Function](https://imgur.com/7bCblKg.png) 
 
-![Alt text](https://imgur.com/IjyLiHf.png) 
+![Virtual Function](https://imgur.com/IjyLiHf.png) 
 
-![Alt text](https://imgur.com/mCduXE1.png) 
+![Virtual Function](https://imgur.com/mCduXE1.png) 
 
 - For late binding ----------> We take pointer's type as our choice. 
 - In case of inheritance, if in any class that has at least one `virtual function`, the compiler will automatically declare a variable within that class as a member, named `*_vptr` (instance member). 
@@ -1411,10 +1392,10 @@ int main()
 - Life of Data. 
 - To make the data exist after the completion of the program, we need file handling. 
 
-![Alt text](https://imgur.com/a5kWBHu.png) 
+![Data Persistence](https://imgur.com/a5kWBHu.png) 
 
 ### Streams 
-![Alt text](https://imgur.com/NiaC1qy.png) 
+![Streams](https://imgur.com/NiaC1qy.png) 
 - **Output Stream**: Data flows from variable to file. 
 - **Input Stream**: Data flows from file to variables. 
 - All those functions that manage the input and output strings are defined in a class in c++ 
@@ -1426,7 +1407,7 @@ int main()
 - For file handling, we use: `ifstream`, `fstream`, `ofstream`. 
 - For file handling, we use the header file `fstream`. 
 
-![Alt text](https://imgur.com/wZOz0LG.png) 
+![Streams](https://imgur.com/wZOz0LG.png) 
  
 ```cpp 
 #include<fstream> 
@@ -1798,7 +1779,7 @@ int main()
 ```
  
 ### Class type to Primitive type 
-![Alt text](https://imgur.com/aBttiJK.png)  
+![Class to Primitive](https://imgur.com/aBttiJK.png)  
 
 ```cpp 
 #include<iostream> 
@@ -1878,8 +1859,8 @@ int main()
   ``` 
 
 ### One Class type to another class type 
-![Alt text](https://imgur.com/yWxksEb.png) 
-![Alt text](https://imgur.com/gylVzGp.png) 
+![1-Class to Another-Class](https://imgur.com/yWxksEb.png) 
+![1-Class to Another-Class](https://imgur.com/gylVzGp.png) 
  
 ```cpp 
 #include<iostream> 
@@ -2044,7 +2025,7 @@ int main()
   - The exception is caught, using **`catch`**, and processed. 
 - We must write `catch` block just after the `try` block.-----> (it is necessary) 
 
-  ![Alt text](https://imgur.com/zC5X6YT.png) 
+  ![Exception Handling](https://imgur.com/zC5X6YT.png) 
 
   ```cpp 
   #include<iostream> 
@@ -2087,9 +2068,9 @@ int main()
 ### `then` 
 - Whenever `throw` is there but no catch is present, then automatically terminate functions gets execute and this function calls abort function hence, program finished 
 
-  ![Alt text](https://imgur.com/TVWX1hU.png) 
+  ![Exception Handling](https://imgur.com/TVWX1hU.png) 
 
-  ![Alt text](https://imgur.com/qhuWEtB.png) 
+  ![Exception Handling](https://imgur.com/qhuWEtB.png) 
 
 - **Another Case** 
   ```cpp 
@@ -2104,7 +2085,7 @@ int main()
   } 
   ``` 
 - **Problem**: `double` is present instead of `int`, compiler shows: 
-  ![Alt text](https://imgur.com/jdo8gWd.png) 
+  ![Exception Handling](https://imgur.com/jdo8gWd.png) 
 
   - Means non-appropriate catch is present 
 - **Another Case**: More than one catch statements are present: 
@@ -2162,7 +2143,7 @@ int main()
   ``` 
 - A namespace definition can be continued and extended over multiple files; they are not redefined or overridden. 
 
-  ![Alt text](https://imgur.com/96LNMUL.png) 
+  ![namespace](https://imgur.com/96LNMUL.png) 
 
 ### Accessing members of namespace 
 - Any name (identifier) declared in a namespace can be explicitly specified using the namespace's name and the scope resolution `::` operator with the identifier. 
@@ -2345,7 +2326,6 @@ int main()
 - Array is a line collection of similar elements. 
 - Array containers in STL provide us with the implementation of static arrays. 
 
-<<<<<<< HEAD
   ```cpp 
   //Use header array: 
    #include<array> 
@@ -2372,476 +2352,3 @@ int main()
  
 - **at()**: 
   - This method returns value in the array at the given integer 
-=======
-};
-class Product
-{
-  private:
-   int m, n;
-  public:
-   void setData (int x, int y)
-   {
-    m = x;
-    n = y;
-   }
-};
-int main()
-{
-  Item i1;
-  Product p1;
-  p1.setData(3,4);
-  i1 = p1;
-  i1.showData();
-
-  return 0;
-}
-```
-
-#### CORRECTION
-```cpp
-#include<iostream>
-using namespace std;
-
-class Product
-{
-  private:
-   int m, n;
-  public:
-   void setData (int x, int y)
-   {
-    m = x;
-    n = y;
-   }
-   int getM()
-   {
-    return (m);
-   }
-   int getN()
-   {
-    return (n);
-   }
-};
-
-/*
-Why did we change the position of Product class with Item class?
-
-We change the position of classes because of the error message as the members gteM & getN are not accessible directly because of the undecleration of them initially;
-
-#include<iostream>
-using namespace std;
-
-int getM();
-int getN();
-
-class Item
-{
-  private:
-    int a, b;
-  public:
-   void showData()
-   {
-    cout<<"\na = "<<a<<" b = "<<b;
-   }
-   Item() { };
-   Item(Product p)
-   {
-    a = p.getM();
-    b = p.getN();
-   }
-
-};
-class Product
-{
-  private:
-   int m, n;
-  public:
-   void setData (int x, int y)
-   {
-    m = x;
-    n = y;
-   }
-   int getM()
-   {
-    return (m);
-   }
-   int getN()
-   {
-    return (n);
-   }
-};
-
-int main()
-{
-  Item i1;
-  Product p1;
-  p1.setData(3,4);
-  i1 = p1;
-  i1.showData();
-
-  return 0;
-}
-
-*/
-class Item
-{
-  private:
-    int a, b;
-  public:
-   void showData()
-   {
-    cout<<"\na = "<<a<<" b = "<<b;
-   }
-   Item() { };
-   Item(Product p)
-   {
-    a = p.getM();
-    b = p.getN();
-   }
-
-};
-
-int main()
-{
-  Item i1;
-  Product p1;
-  p1.setData(3,4);
-  i1 = p1;
-  i1.showData();
-
-  return 0;
-}
-```
-
-## Exception Handling
-- Exceptiom is nay abnormal behaviour, run time error.
-- Exceptions are off beat situation in your programwhere your program should ready to handle it with appropriate response.
-- C++ provides a built-in error handling mechanism that is called exception handling.
-- Using exception handling, you can more easily manage and response to runtime errors.
-- `try`, `catch`, `throw`:
-  - Program statements that you want to monitor for exceptions are contained in a **`try`** block.
-  - If any exception occurs within the `try` block, it is thrown (using **`throw`**)
-  - The exception is caught, using **`catch`**, and processed.
-- We have to write `catch` block just after the `try` block.-----> (it is necessary)
-  ![Alt text](https://imgur.com/zC5X6YT.png)
-
-  ```cpp
-  #include<iostream>
-  using namespace std;
-
-  int main()
-  {
-    cout<<"Welcome";
-    try
-    {
-      throw 10;
-      cout<<"\nIn Try";
-      /*Not executed, because after the throw whatever be the statements gets ignored by the compiler.*/
-    }
-      catch (int e)
-      {
-        cout<<"\nException no: "<<e;
-      }
-      cout<<"\nLast Line";
-      return 0;
-
-  }
-
-  ```
-
-  ```cpp
-  /*
-  When only throw statement is there like:
-  //try
-  //{
-    throw 10;
-    cout<<"\nIn throw";
-  // }
-  //  catch (int e)
-  //  {
-  //      cout<<"\nExceptio//n no: "<<e;
-  //  }
-    cout<<"\nLast Line";
-      return 0;
-
-  ```
-
-### `then`
-- Whenever `throw` is there but no catch is present, then automatically termiante functions gets execute and this function calls abirt function hence, program finished
-
-  ![Alt text](https://imgur.com/TVWX1hU.png)
-  ![Alt text](https://imgur.com/qhuWEtB.png)
-
-- **Another Case**
-  ```cpp
-  try
-  {
-    throw 10;
-      cout<<"\nIn Try";
-      catch (double e)
-      {
-        cout<<"\nException no: "<<e;
-      }
-  }
-  ```
-- **Problem**: `double` is present instead of `int`, compiler shows:
-  ![Alt text](https://imgur.com/jdo8gWd.png)
-  - Means non-appropriate catch is present
-- **Another Case**: More than one catch statements are present:
-  ```cpp
-  try
-  {
-    throw 10;
-    cout<<"\nIn Try";
-  }
-  catch (double e)
-    {
-      cout<<"\nException no: "<<e;
-    }
-  catch (int e)
-    {
-      cout<<"\nException no: "<<e;
-    }
-  cout<<"\nLast Line";
-  ```
-
-- Here, compiler matches the throw with the rescpective data tye i.e, here with the int version.
-  - **Catch**:
-    - When an exception is caught, arg will recieve its value.
-    - If you don't need access to thr exception itself, specify only type in the catch clause-arg is optional.
-    - Any type of data can be caught, including classes that you create.
-  - **Throw**:
-    - The general form of the throw statement is: `throw exception;`
-    - Throw must be executed either within the try block proper or from any function that the code within the block calls.
-
-## Dynamic Constructor
-- Constructor can allocate dynamically created memory to the object.
-- Thus, object is going to use memory region, which is dynamically created by constructor.
-
-## `namespace` in C++
-- Namespace is a container for identifiers.
-- It puts the names of its members in a distinct space so that they don't conflict with the names in other namespaces or global namespace.
-
-### How to create namespace
-- Namespace definition doesn't terminates with a semicolon like in class definition.
-- The namespace definition must be done at global scope, or nested inside another namespace.
-- You can use an alias name for your namespace name, for ease of use
-  - namespace ms = `Myspace`;
-    ```cpp
-    namespace Myspace
-    {
-      // Declarations
-    }
-    ```
-- There can be `unnamed` namespaces too.
-  ```cpp
-  namespace
-  {
-    //  declarations
-  }
-  ```
-- A namespace definition can be continued and extende over multiple files, they are not redefined or overridden.
-
-  ![Alt text](https://imgur.com/96LNMUL.png)
-
-### Accessing members of namespace
-- Any name (identifier) declared in a namespace can be explicitly specified using the namespace's name and the scope resolution `::` operator with the identifier.
-  ```cpp
-  #include<iostream>
-  using namespace std;
-  namespace Myspace
-  {
-    int a;
-    void f1;
-    class Hello
-    {
-      public:
-        void hello()
-        {
-          cout<<"Hello";
-        }
-    };
-  }
-
-  void Myspace::f1()
-  {
-    cout<<"In f1";
-  }
-
-  int main()
-  {
-    Myspace::a = 5;
-    Myspace::Hello obj;
-    obj.hello();
-    Myspace::f1();
-  }
-  ```
-### The `using` directive
-- **_using_** keyword allows you to import an entire namespaceinto your program with a global scope.
-- It can be used to import a namespace into another namespace or nay progtam.
-  ```cpp
-  #include<iostream>
-  using namespace std;
-  namespace Myspace
-  {
-    int a;
-    void f1;
-    class Hello
-    {
-      public:
-        void hello()
-        {
-          cout<<"Hello";
-        }
-    };
-  }
-  using namespace Myspace;
-  void Myspace::f1()
-  {
-    cout<<"In f1";
-  }
-
-  int main()
-  {
-    a = 5;
-    Hello obj;
-    obj.hello();
-    f1();
-  }
-  ```
-
-## Virtual Destructor in C++
-### Nested Class
-- Class inside a class is called nested class
-- A nested class is a member and such has the same access rights as any other members.
-- The members of an enclosing class have no special access to members of a nested class; the usual access rules shall be obeyed
-  ```cpp
-  #include<iostream>
-  using namespace std;
-  class Student
-  {
-    private:
-      int rollno;
-      char name[20];
-      class Address
-      {
-        private:
-        int houseno;
-        char street[20];
-        char city[20];
-        char state[30];
-        char pincode[7];
-        public:
-          void setAddress(int h, char *s, char *c, char *st, char *p)
-          {
-            houseno = h;
-            strcpy(street,s);
-            strcpy(city,c);
-            strcpy(state,st);
-            strcpy(pincocde,p)
-          }
-        };
-        Address add;
-    public:
-      void setRollno(int r)
-      {
-      rollno = r;
-      }
-      void setName(char *n)
-      {
-      strcpy(name,n);
-      }
-      void setAddress(int h, char *s, char *c, char *st, char *p)
-      {
-      add.setAddress(h,s,c,st,p);
-      }
-      void show Student ()
-      {
-      cout<<"Student Data"<<endl;
-      cout<<rollno<<" ";
-      cout<<name<<" ";
-      add.showAddress();
-      }
-  };
-  int main()
-  {
-    Student::Address a1;
-    Student s1;
-    s1.setRollno(100);
-    s1.setName("Rahul");
-    s1.setAddress(301,"hanuman gali",bhopal","462042","MP");
-    s1,showStudent();
-  }
-  ```
-
-## STL
-- STL is Standard Template Library.
-- It is a powerful set of C++ template classes.
-- At the core of the C++ Standard Template Library are following three well-structured components.
-  - Containers
-  - Algorithms
-  - Iterators
-
-### Containers
-- Containers are used to manage collections of objects of a certain kind.
-- Container library in STL provide containers that are used to create data structure like arrays, linked list, trees, etc.
-- These containers are generic, they can hold elements of any data types.
-  - Example: **vector** can be used for creating dynamic arrays of char, integer, float and other types.
-
-### Algorithms
-- Algorithma act on containers. They provide the means by ehich you will perform initialization, sorting, searching, and transforming of the contents of containers.
-- Algorithms library contains built in functions that perform complex algorithms on the data structures.
-  - Example:
-    - One can reverse a range with reverse() function, sort a range with sort() function, search in a range with binary_search() and so on.
-- Algorithm library provides abstraction, i.e you don't necessarily need to know how the algorithm works.
-
-### Iterators
-- Iterators are used to step through the elements of collections of objects. These collections may be containers or subsets of containers.
-- Iterators in STL are used to point to the containers.
-- Iterators actually acts as a bridge between containers and algorithms.
-  - Example: sort() algorithm have two parameters, starting iterator and ending iterator, now sort() compare the elements pointed by each of yhese iterators and arrange them in sorted order, thus it does not matter what is the type of the container and some sort() can be used on different types of containers.
-
-## Containers
-- Container library is a collection of classes.
-- The containers are implemented as generic class templates.
-- Containers helps us to implement and replicate simple and complex data structures very easilyy like arrays, list, trees, associative arrays and many more.
-- Containers can be used to hold different kind of objects
-- When we use list containers to implement linked list we just have to include the list header file and use list constructor to initialise the list.
-  ```cpp
-  #include<iostream>
-  #include<list>
-  int main()
-  {
-    list<int>mylist;
-  }
-  ```
-
-### Array
-- Array is a liners collection of similar elements.
-- Array containers in STL provides us the implementation of static array.
-  ```cpp
-  //Use header array:
-   #include<array>
-  // how to call:
-  array<object_type,array_size>array_name;
-  int main()
-  {
-    // Assignment of values during declaration:
-    array<int,4>odd_numbers = {2,4,6,8};
-  }
-  ```
-- It creates an empty array of **object_type** with maximum size of **array_size**.
-- Member Functions:
-  - Following are the important and most used member functions of array template:
-    - `at`
-    - `[ ]operator`
-    - `front()`
-    - `back()`
-    - `fill()`
-    - `swap()`
-    - `size()`
-    - `begin()`
-    - `end()`
-
-- **at()**:
-  - This method returns value in the array at the given integer
->>>>>>> 9b002238bda98f0ca1358900c4347782d54864e9

@@ -21,10 +21,10 @@
 - First GUI appeard on `Xerox Alto` computer in `1973`
 
 ## Interrupt:
-![Interrupt](image.png)
+![Interrupt](/Image/OS/Interrupt.png)
 
 ## Dual-Mode Operation:
-![Dual-Mode Operation](image-1.png)
+![Dual-Mode Operation](/Image/OS/Dual-ModeOperation.png)
 - Two separate modes of operation: `user mode`  and `kernel mode` (supervision mode / system mode / privileged mode). A bit called the `mobile bit`, is added to the hardware of the computer to indicate the current mode: kernel (`0`) and user (`1`). 
 
 - Electronic devices may be volatile or non-volatile.
@@ -54,7 +54,7 @@
     - Consuming CPU time unfairly
 
 ### System Call & API
-![alt text](image-2.png)
+![alt text](/Image/OS/SystemCall-API.png)
 
 ### Process Control and System Calls:
 #### Program Termination:

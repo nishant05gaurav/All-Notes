@@ -5,7 +5,7 @@
 - We use the ```alert("whatever you want to make pop up")``` keyword to create a pop to any website.
 - [Documentation of JavaScript](https://tc39.es/ecma262/#sec-intro)
 
-![General](image-2.png)
+![General](/Image/WebDev/General.png)
 - Data-types are categories into two types on the basis of how data is stored in the memory and how it is used:
   - Primitive (call by value):
     - number ( Range 2^53 )
@@ -27,7 +27,7 @@
 ### Data Conversion
 
 - For conversion of datatypes we use **Number, String,** etc
-    ![Datatype Conversion](image.png)
+    ![Datatype Conversion](/Image/WebDev/Datatype-Conversion.png)
     - In case of `null` the final coversion is `0`
     - In case of `undefined` the final conversion is `NaN`
     - In case of `boolean`:
@@ -52,10 +52,10 @@
     true + 1       // 2      (boolean → number)
     ```
 
-![TypeCasting Internally In Memory](image-3.png)
-![Some Important Concepts](image-4.png)
-![String Method in JS](<Screenshot 2025-04-20 170518.png>)
-![Maths Functions in JS](<Whiteboard 4.png>)
+![TypeCasting Internally In Memory](/Image/WebDev/TypeCasting-MemoryInternal.png)
+![Some Important Concepts](/Image/WebDev/ImpConcept.png)
+![String Method in JS](/Image/WebDev/StringMethod.png)
+![Maths Functions in JS](/Image/WebDev/MathsFxn.png)
 
 ### Date and Time 
 - Date are the `object` represent in a single moment in time in a platform independent format
