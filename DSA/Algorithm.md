@@ -378,7 +378,7 @@ Algorithm RBinSearch (l, h, key)
 ![Insertion&Deletion - Heap](/Image/DSA/Insertion_Deletion-Heap.png)
 
 ### Deletion element from Heap
-- **Time Complexity**: log n
+- **Time Complexity**: **`O (log n)`**
 - **Delete Root**: The element at the root (the maximum in a max-heap, minimum in a min-heap) is removed
 - **Move Last Element to Root**: The last element in the heap (which might not be the largest or smallest) is placed in the root position.
 - **Heapify Down**
@@ -421,10 +421,10 @@ Algorithm RBinSearch (l, h, key)
   - **Optimization Algorithms**: Various optimization algorithms (Dijkstra's algorithm)
 - _Standard queues_ adhere to FIFO, while _Priority queues_ prioritize based on assigned values.
 
-## ![Merge Sort](https://imgur.com/vzZBXDw.png)
-
-## ![aMerging](https://imgur.com/b5e7X1y.png)
-
+<!-- ## ![Merge Sort I](/Image/DSA/MergeSort-I.jpeg) -->
+<!-- ## ![Merge Sort II](/Image/DSA/MergeSort-II.jpeg) -->
+<!-- ## ![Merge Sort III](/Image/DSA/MergeSort-III.jpeg) -->
+## ![Merge Sort](/Image/DSA/MergeSort.png)
 ### Pros & Cons of Merge Sort
 - Large size list
 - Linked List
@@ -441,7 +441,9 @@ Algorithm RBinSearch (l, h, key)
   Element of Array: 3, 4, 5, 6, 8(R), 8(A), 9
   ```
 
-## ![Quick Sort](https://imgur.com/JonbbLM.png)
+## ![Quick Sort](/Image/DSA/Quick-Sort.png)
+<!-- ![alt text](image.png) -->
+## ![Strassen's matrix Multiplication](/Image/DSA/Strassen's-Matrix.png)
 
 ## Greedy Method
 - A greedy method is a particular approach for solving optimization problems (problems which require either minimum/ maximum result) by making a series of choices that appear best at each stage.
